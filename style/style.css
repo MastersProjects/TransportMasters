@@ -1,30 +1,101 @@
-body{
+body {
 	margin: 0;
 	padding: 0
 }
 
-.imgheader{
-	background-image: url("../img/background_02.jpg");
+.imgheader {
 	background-repeat: no-repeat;
 	background-size: cover;
 	visibility: inherit;
 	height: 100vh;
 }
 
-.buttonBottom{
-	position:absolute;
-	bottom:0;
+h1 {
+	color: white;
+	font-family: arial;
+	margin: 0;
+}
+
+.buttonBottom {
+	position: absolute;
+	bottom: 0;
 	margin: 0 50%
 }
 
-.formbackground{
+.formbackground {
 	height: 315px;
 	width: 100%;
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0, 0, 0, 0.5);
 	position: relative;
 	top: 30%;
 }
 
-#test{
-	height: 100vh;
+@media ( min-width : 1050px) {
+	#aboutus {
+		height: 100vh;
+		background-image: url("../img/bike_zurich.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		visibility: inherit;
+	}
+	.about {
+		padding: 10% 0 0 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.aboutperson {
+		background-color: rgba(0, 0, 0, 0.5);
+		float: left;
+		width: 250px;
+		height: auto;
+		margin: 20px 40px 20px 40px;
+		padding: 10px 10px 0 10px;
+	}
+	.img-about {
+		border-radius: 50%;
+		display: block;
+		max-width: 100%;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10px
+	}
+}
+
+@media ( max-width :1050px) {
+	#aboutus {
+		height: 100vh;
+		background-image: url("../img/bike_zurich.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		visibility: inherit;
+	}
+	.about {
+		padding: 20px 0 0 0;
+		margin-left: auto;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.aboutperson {
+		background-color: rgba(0, 0, 0, 0.5);
+		float: left;
+		width: 250px;
+		height: auto;
+		margin: 20px 40px 20px 40px;
+		padding: 10px 10px 0 10px;
+	}
+	.img-about {
+		border-radius: 50%;
+		display: block;
+		max-width: 100%;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10px
+	}
+}
+
+.aboutperson h3, p {
+	color: white;
+	font-family: arial;
 }
