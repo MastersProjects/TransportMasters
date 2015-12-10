@@ -16,19 +16,22 @@
 			<div class="form">
 				<form>
 					<input type="text" name="von" placeholder="Von" /> <input
-						type="text" name="bis" placeholder="Bis" /> <input type="submit"
-						value="Send" />
+						type="text" name="bis" placeholder="Bis" /> <input type="date"
+						name="date" value="<?php print(date("Y-m-d")); ?>"> <input
+						type="time" name="time" value="<?php print(date("G:i")); ?>"> <input
+						type="submit" value="Send" />
 				</form>
 			</div>
 		</div>
 		<div class="buttonBottom">
 			<a href="#test" class="click"><i
-				class="fa fa-chevron-circle-down fa-3x" style="color:#1D50E8"></i></a>
+				class="fa fa-chevron-circle-down fa-3x" style="color: #1D50E8"></i></a>
 		</div>
 	</div>
 
 	<div id="test"></div>
-	
-<script src="style/scroll.js"></script>
+
+	<script src="style/scroll.js"></script>
+
 </body>
 </html>
