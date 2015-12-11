@@ -15,10 +15,11 @@ abstract class JSONLoadingTask{
 	abstract public function onPostExecute($ToDo);
 	
 	/**
-	 * ToDo
-	 * @param unknown_type $ToDo
+	 * This Function creates the URL for the JSON 
+	 * request to transport.opendata.ch
+	 * @param arry $param
 	 */
-	abstract public function createURL($ToDo);
+	abstract public function createURL($param);
 	
 	/**
 	 * ToDo
