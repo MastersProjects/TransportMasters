@@ -30,7 +30,7 @@ h1 {
 	top: 30%;
 }
 
-@media ( min-width : 1050px) {
+@media ( min-width : 1060px) {
 	#aboutus {
 		height: 100vh;
 		background-image: url("../img/bike_zurich.png");
@@ -62,9 +62,9 @@ h1 {
 	}
 }
 
-@media ( max-width :1050px) {
+@media ( min-width: 720px) and (max-width :1059px) {
 	#aboutus {
-		height: 100vh;
+		height: 120vh;
 		background-image: url("../img/bike_zurich.png");
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -98,4 +98,36 @@ h1 {
 .aboutperson h3, p {
 	color: white;
 	font-family: arial;
+}
+
+@media (max-width: 719px) {
+	#aboutus {
+		height: 180vh;
+		background-image: url("../img/bike_zurich.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		visibility: inherit;
+	}
+	.about {
+		padding: 20px 0 0 0;
+		margin-left: auto;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.aboutperson {
+		background-color: rgba(0, 0, 0, 0.5);
+		float: left;
+		width: 250px;
+		height: auto;
+		margin: 20px 40px 20px 40px;
+		padding: 10px 10px 0 10px;
+	}
+	.img-about {
+		border-radius: 50%;
+		display: block;
+		max-width: 100%;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10px
 }
