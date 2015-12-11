@@ -8,23 +8,28 @@
 abstract class JSONLoadingTask{
 	private $JSONParser;
 	
+		
 	/**
-	 * ToDo
-	 * @param unknown_type $ToDo
+	 * This function loads the JSON from
+	 * the given URL. The function returns
+	 * a decoded JSON.
+	 * @param string $url
 	 */
-	abstract public function onPostExecute($ToDo);
+	abstract public function getJSONStream($url);
+	
+	/**
+	 * This function is for setting the next step what to do with JsonString
+	 * @param String $jsonString
+	 */
+	abstract public function onPostExecute($jsonString);
 	
 	/**
 	 * This Function creates the URL for the JSON 
 	 * request to transport.opendata.ch
-	 * @param arry $param
+	 * @param arry $params
 	 */
-	abstract public function createURL($param);
+	abstract public function createURL($params);
 	
-	/**
-	 * ToDo
-	 * @param unknown_type $ToDo
-	 */
-	abstract public function getJSONStream($ToDo);
+
 	
 }

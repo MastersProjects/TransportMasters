@@ -7,7 +7,11 @@
  */
 Class JSONParser{
 	
-	public function getConnection() {
-		;
+	public function getConnection($jsonString) {
+		$data = json_decode($jsonString);
+		/*
+		 * Parse parse parse...
+		 */
+		return $connection;
 	}
 }

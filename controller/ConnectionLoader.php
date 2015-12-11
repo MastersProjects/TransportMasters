@@ -10,27 +10,33 @@ require_once 'JSONLoadingTask.php';
 Class JourneyDetails extends JSONLoadingTask {
 	
 	/**
-	 * ToDo
-	 * @param unknown_type $ToDo
-	 */
-	public function onPostExecute($ToDo);
-	
-	/**
-	 * This Function creates the URL for the JSON 
-	 * request to transport.opendata.ch
-	 * @param arry $param
-	 */
-	public function createURL($param){
-		return 'http://transport.opendata.ch/v1/connections?' . http_build_query ( $param );
-	}
-	
-	/**
 	 * This function loads the JSON from
-	 * the given URL. The function returns 
+	 * the given URL. The function returns
 	 * a decoded JSON.
 	 * @param string $url
 	 */
 	public function getJSONStream($url){
-		return json_decode(file_get_contents($url));
+		$jsonString = file_get_contents($url);
+		onPostExecute($jsonString);
 	}
+	
+	/**
+	 * This function is for setting the next step what to do with JsonString
+	 * @param String $jsonString
+	 */
+	public function onPostExecute($jsonString){
+		//TODO next step: what to do with this connection object
+		$connection = $JSONParser.getConnection($jsonString);
+	}
+	
+	/**
+	 * This Function creates the URL for the JSON 
+	 * request to transport.opendata.ch
+	 * @param arry $params
+	 */
+	public function createURL($params){
+		return 'http://transport.opendata.ch/v1/connections?' . http_build_query ( $params[0] );
+	}
+	
+
 }
