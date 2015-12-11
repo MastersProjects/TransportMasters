@@ -33,7 +33,7 @@ h1 {
 @media ( min-width : 1050px) {
 	#aboutus {
 		height: 100vh;
-		background-image: url("../img/bd_suburb.jpg");
+		background-image: url("../img/bike_zurich.png");
 		background-repeat: no-repeat;
 		background-size: cover;
 		visibility: inherit;
