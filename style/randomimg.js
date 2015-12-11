@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 //the highest number of the image you want to load
-var upperLimit = 3;
+var upperLimit = 4;
 
 //get random number between 1 and 3
 //change upperlimit above to increase or 
