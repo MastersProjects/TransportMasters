@@ -10,6 +10,9 @@ var randomNum = Math.floor((Math.random() * upperLimit) + 1);
 
  //change the background image to a random jpg
  //edit add closing )  to prevent syntax error
- $(".imgheader").css("background-image","url('img/background_0" + randomNum + ".jpg')");//<--changed path
+ $(".imgheader").css({
+	 "background-image":"url('img/background_0" + randomNum + ".jpg')",
+	 "margin-top": "-10px"
+ });//<--changed path
 
  });
