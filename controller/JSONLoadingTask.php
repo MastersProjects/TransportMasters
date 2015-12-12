@@ -7,7 +7,7 @@
  */
 abstract class JSONLoadingTask{
 	
-	private $jsonParser;
+	protected $jsonParser;
 	
 	public function __construct() {
 		 $this->jsonParser = new JSONParser();

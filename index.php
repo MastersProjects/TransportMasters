@@ -29,13 +29,16 @@
 			</div>
 		</div>
 		<div class="buttonBottom">
-			<a href="#test" class="click">
+			<a href="#aboutus" class="click">
 				<i class="fa fa-chevron-circle-down fa-3x" style="color: #1D50E8"></i>
 			</a>
 		</div>
 	</div>
 
-	<div id="test"></div>
+	<div id="connection">
+	<h1>Connection</h1>
+		<!--Connection?-->
+	</div>
 	<div id="aboutus">
 		<div class="about">
 		<div class="aboutperson">

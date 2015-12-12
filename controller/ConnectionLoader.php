@@ -9,7 +9,7 @@ require_once 'controller/JSONLoadingTask.php';
 require_once 'controller/JSONParser.php';
 
 Class ConnectionLoader extends JSONLoadingTask {
-	
+		
 	/**
 	 * This function loads the JSON from
 	 * the given URL. The function returns
