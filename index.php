@@ -29,8 +29,8 @@
 			</div>
 		</div>
 		<div class="buttonBottom">
-			<a href="#test" class="click"><i
-				class="fa fa-chevron-circle-down fa-3x" style="color: #1D50E8"></i>
+			<a href="#test" class="click">
+				<i class="fa fa-chevron-circle-down fa-3x" style="color: #1D50E8"></i>
 			</a>
 		</div>
 	</div>
@@ -49,7 +49,7 @@
 		<div class="aboutperson">
 			<img class="img-about" src="img/phong.png" alt="Chiramed Phong Penglerd">
 			<h3>
-				Chiramed Phong Penglerd <small>Apprentice</small><small> Raiffeisen</small>
+				Chiramed Phong Penglerd <small> Raiffeisen Schweiz</small>
 			</h3>
 			<p>What does this team member to? Keep it short! This is also a great
 				spot for social links!</p>

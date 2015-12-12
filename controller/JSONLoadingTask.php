@@ -6,16 +6,20 @@
  * TransportMasters 2015
  */
 abstract class JSONLoadingTask{
-	private $JSONParser;
 	
-		
+	private $jsonParser;
+	
+	public function __construct() {
+		 $this->jsonParser = new JSONParser();
+	}
+			
 	/**
 	 * This function loads the JSON from
 	 * the given URL. The function returns
 	 * a decoded JSON.
 	 * @param string $url
 	 */
-	abstract public function getJSONStream($url);
+	abstract public function getJSONStream($params);
 	
 	/**
 	 * This function is for setting the next step what to do with JsonString

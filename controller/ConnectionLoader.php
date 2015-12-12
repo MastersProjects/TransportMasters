@@ -5,9 +5,10 @@
  * @version 1.0
  * TransportMasters 2015
  */
-require_once 'JSONLoadingTask.php';
+require_once 'controller/JSONLoadingTask.php';
+require_once 'controller/JSONParser.php';
 
-Class JourneyDetails extends JSONLoadingTask {
+Class ConnectionLoader extends JSONLoadingTask {
 	
 	/**
 	 * This function loads the JSON from
@@ -15,9 +16,9 @@ Class JourneyDetails extends JSONLoadingTask {
 	 * a decoded JSON.
 	 * @param string $url
 	 */
-	public function getJSONStream($url){
-		$jsonString = file_get_contents($url);
-		onPostExecute($jsonString);
+	public function getJSONStream($params){
+		$jsonString = file_get_contents($this->createURL($params));
+		return $this->onPostExecute($jsonString);
 	}
 	
 	/**
@@ -25,8 +26,8 @@ Class JourneyDetails extends JSONLoadingTask {
 	 * @param String $jsonString
 	 */
 	public function onPostExecute($jsonString){
-		//TODO next step: what to do with this connection object
-		$connection = $JSONParser.getConnection($jsonString);
+		//$this->jsonParser says it can't find but its extended from JSONLoadingTask
+		return $this->jsonParser->getConnection($jsonString);
 	}
 	
 	/**
@@ -35,7 +36,7 @@ Class JourneyDetails extends JSONLoadingTask {
 	 * @param arry $params
 	 */
 	public function createURL($params){
-		return 'http://transport.opendata.ch/v1/connections?' . http_build_query ( $params[0] );
+		return 'http://transport.opendata.ch/v1/connections?from=' . $params[0] . '&to=' . $params[1] . '&limit=' . $params[2];
 	}
 	
 
