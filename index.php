@@ -19,7 +19,7 @@
 	<div class="imgheader">
 		<div class="formbackground">
 			<div class="form">
-				<form action="controller/controller.php>
+				<form action="controller.php" method="post">
 					<input type="text" name="from" placeholder="Von" /> <input
 						type="text" name="to" placeholder="Bis" /> <input type="date"
 						name="date" value="<?php print(date("Y-m-d")); ?>"> <input

@@ -36,7 +36,9 @@ Class ConnectionLoader extends JSONLoadingTask {
 	 * @param array $params
 	 */
 	public function createURL($params){
-		return 'http://transport.opendata.ch/v1/connections?from=' . $params[0] . '&to=' . $params[1] . '&limit=' . $params[2];
+// 		return 'http://transport.opendata.ch/v1/connections?from=' . $params[0] . '&to=' . $params[1] . '&limit=' . $params[
+		return ('http://transport.opendata.ch/v1/connections'. http_build_query($params));
+		
 	}
 	
 
