@@ -34,6 +34,4 @@ abstract class JSONLoadingTask{
 	 */
 	abstract public function createURL($params);
 	
-
-	
 }

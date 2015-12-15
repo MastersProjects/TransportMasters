@@ -18,15 +18,12 @@ Class JSONParser{
         	
    		 }else if ($data->to) {
    		 	$to = $data->to->name;
-   		 	$connection->setTo($to);
-   		 	
+   		 	$connection->setTo($to);	
    		 }
    		 
    		 echo "$from <br>";
    		 echo $to;
 		
-
-
-		return $data;
+		return $connection;
 	}
 }

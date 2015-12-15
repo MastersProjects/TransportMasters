@@ -26,6 +26,7 @@ $params = array (
 );
 
 $connectionLoader = new ConnectionLoader();
-//$connectionLoader->getJSONStream($params);
-echo $connectionLoader->createURL($params);
+$connectionLoader->getJSONStream($params);
+//echo $connectionLoader->createURL($params);
+
 ?>
