@@ -19,9 +19,9 @@
 	<div class="imgheader">
 		<div class="formbackground">
 			<div class="form">
-				<form>
-					<input type="text" name="von" placeholder="Von" /> <input
-						type="text" name="bis" placeholder="Bis" /> <input type="date"
+				<form action="controller/controller.php>
+					<input type="text" name="from" placeholder="Von" /> <input
+						type="text" name="to" placeholder="Bis" /> <input type="date"
 						name="date" value="<?php print(date("Y-m-d")); ?>"> <input
 						type="time" name="time" value="<?php print(date("G:i")); ?>"> <input
 						type="submit" value="Send" />
