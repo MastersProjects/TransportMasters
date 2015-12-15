@@ -12,4 +12,28 @@ Class JourneyDetails{
 	private $time;
 	private $platform;
 	private $location;
+	
+	public function getTime(){
+		return $this->time;
+	}
+	
+	public function setTime($time){
+		$this->time = $time;
+	}
+	
+	public function getPlatform(){
+		return $this->platform;
+	}
+	
+	public function setPlatform($platform){
+		$this->platform = $platform;
+	}
+	
+	public function getLocation(){
+		return $this->location;
+	}
+	
+	public function setLocation($location){
+		$this->location = $location;
+	}
 }

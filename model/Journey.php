@@ -19,4 +19,36 @@ Class Journey{
 		$this->arrival = new JourneyDetails();
 		$this->departure = new JourneyDetails();
 	}
+	
+	public function getName(){
+		return $this->name;
+	}
+	
+	public function setName($name){
+		$this->name = $name;
+	}
+	
+	public function getDeparture(){
+		return $this->departure;
+	}
+	
+	public function setDeparture($departure){
+		$this->departure = $departure;
+	}
+	
+	public function getArrival(){
+		return $this->arrival;
+	}
+	
+	public function setArrival($arrival){
+		$this->arrival = $arrival;
+	}
+	
+	public function getCategory(){
+		return $this->category;
+	}
+	
+	public function setCategory($category){
+		$this->category = $category;
+	}
 }
