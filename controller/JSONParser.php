@@ -11,7 +11,7 @@ Class JSONParser{
 		
 		$data = json_decode($jsonString);
 		/*
-		 * Parse parse parse...
+		 * Pars pars pars...
 		 */
 		return $data;
 	}

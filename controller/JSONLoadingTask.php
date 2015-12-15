@@ -30,7 +30,7 @@ abstract class JSONLoadingTask{
 	/**
 	 * This Function creates the URL for the JSON 
 	 * request to transport.opendata.ch
-	 * @param arry $params
+	 * @param array $params
 	 */
 	abstract public function createURL($params);
 	
