@@ -12,14 +12,19 @@ Class JSONParser{
 		$connection = new Connection();
 		$data = json_decode($jsonString);
 			
-		$jsonIterator = new RecursiveIteratorIterator(
-				new RecursiveArrayIterator($data),
-				RecursiveIteratorIterator::SELF_FIRST);
+		 if ($data->from) {
+        	$from = $data->from->name;
+        	$connection->setFrom($from);
+        	
+   		 }else if ($data->to) {
+   		 	$to = $data->to->name;
+   		 	$connection->setTo($to);
+   		 	
+   		 }
+   		 
+   		 echo "$from <br>";
+   		 echo $to;
 		
-		foreach ($jsonIterator as $key => $value) {
-			echo $key;
-		}
-
 
 
 		return $data;

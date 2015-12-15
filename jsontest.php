@@ -24,4 +24,5 @@ $params = array (
 // $json = file_get_contents($url);
 // var_dump($json);
 $connectionLoader = new ConnectionLoader();
-var_dump($connectionLoader->getJSONStream($params));
+$connectionLoader->getJSONStream($params);
+// var_dump($connectionLoader->getJSONStream($params));
