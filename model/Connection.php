@@ -13,13 +13,13 @@ Class Connection{
 	private $from;
 	private $to;
 	private $duration;
-	private $journey;
+	private $journey = array();
 	private $departureTime;
 	private $arivallTime;
 	private $transfers;	
 	
 	function __construct() {
-		$this->journey = new Journey();
+		
 	}
 	
 	public function getFrom(){
@@ -50,8 +50,8 @@ Class Connection{
 		return $this->journey;
 	}
 	
-	public function setJourney($journey){
-		$this->journey = $journey;
+	public function addJourney($journey){
+		array_push($this->journey, $journey);
 	}
 	
 	public function getDepartureTime(){
