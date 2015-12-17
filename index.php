@@ -18,20 +18,53 @@
 
 </head>
 <body>
-
 <?php
-session_start ();
+	require_once ('model/Connection.php');
+	require_once ('model/Journey.php');
+	require_once ('model/JourneyDetails.php');
+	require_once ('Controller.php');
 
-if (isset ( $_SESSION ['connection'] )) {?>
+	if ($_SERVER ["REQUEST_METHOD"] == "POST") {
+		// We can do validation here
+		if (isset ( $_POST ['from'] )) {
+			$from = $_POST ['from'];
+		}
+		
+		if (isset ( $_POST ['to'] )) {
+			$to = $_POST ['to'];
+		}
+		
+		if (isset ( $_POST ['date'] )) {
+			$date = $_POST ['date'];
+		}
+		
+		if (isset ( $_POST ['time'] )) {
+			$time = $_POST ['time'];
+		}
+		
+		$params = array (
+				"from" => $from,
+				"to" => $to,
+				"date" => $date,
+				"time" => $time,
+				"limit" => 4
+		);
+		
+		$controller = new Controller ();
+		$connections = $controller->getConnections ( $params );
+		?>
+		
 <script type="text/javascript">onload = function() {scrollToElement($(this).attr('connection'), 1500)};</script>
+
 <?php } ?>
 
 	<div class="imgheader">
 		<div class="formbackground">
 			<div class="form">
-				<form action="controller.php" method="post">
-					<input type="text" name="from" placeholder="Von" /> <input
-						type="text" name="to" placeholder="Bis" /> <input type="date"
+				<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"
+					method="post">
+					<input type="text" name="from" placeholder="Von" autocomplete="off"/> <input
+						type="text" name="to" placeholder="Bis" autocomplete="off" /> <input type="date"
 						name="date" value="<?php print(date("Y-m-d")); ?>"> <input
 						type="time" name="time" value="<?php print(date("H:i")); ?>"> <input
 						type="submit" value="Send" />
@@ -47,12 +80,12 @@ if (isset ( $_SESSION ['connection'] )) {?>
 
 	<div id="connection">
 		<?php
-		
-if (isset ( $_SESSION ['connection'] )) {
-			var_dump($_SESSION ['connection']);
-			session_unset ();
-		}
-?>
+		if (isset ( $connections )) {
+			foreach ( $connections as $connection ) {
+				echo $connection->getFrom ();
+				echo $connection->getTo ();
+			}
+		}?>
 	</div>
 	<div id="aboutus">
 		<div class="about">
@@ -79,10 +112,13 @@ if (isset ( $_SESSION ['connection'] )) {
 					Elia Perenzin <small>Apperntice</small><br> <small>Hewlett-Packard
 						Enterprise</small>
 				</h3>
-				<p>What does this team member to? Keep it short! This is also a
-					great spot for social links!</p>
+				<p>I&#145;m doing an apprentice as an application developer. In my free time I love to take picture or do sports. The pictures on this website are taken by me. <a href="https://www.flickr.com/photos/eliaperenzin/" target="_blank" >Flickr</a></p>
 			</div>
 		</div>
+	</div>
+	<div id="footer">
+	<h1>&copy; - Wer will cha en sch&ouml;ne Footer mache :D </h1>
+	
 	</div>
 	<script src="style/scroll.js"></script>
 </body>

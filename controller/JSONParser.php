@@ -64,7 +64,6 @@ class JSONParser {
 		// echo $connection->getTransfers(), "<br>";
 		// var_dump($connection->getJourney());
 // 		var_dump($connections);
-		$_SESSION['connection'] = $connections;
-		header('Location: index.php' );
+		return($connections);
 	}
 }
