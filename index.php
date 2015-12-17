@@ -81,6 +81,8 @@
 	<div id="connection">
 		<?php
 		if (isset ( $connections )) {
+			var_dump($connections);
+			echo "<br>";
 			foreach ( $connections as $connection ) {
 				echo $connection->getFrom ();
 				echo $connection->getTo ();
