@@ -14,6 +14,7 @@ Class Journey{
 	private $departure;
 	private $arrival;
 	private $category;
+	private $duration;
 	
 	function __construct() {
 		$this->arrival = new JourneyDetails();
@@ -50,5 +51,13 @@ Class Journey{
 	
 	public function setCategory($category){
 		$this->category = $category;
+	}
+	
+	public function getDuration(){
+		return $this->duration;
+	}
+	
+	public function setDuration($duration){
+		$this->duration = $duration;
 	}
 }
