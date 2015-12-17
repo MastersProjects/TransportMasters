@@ -94,8 +94,10 @@
 				<h3>
 					Luca Marti <small>Apprentice</small><br> <small>Z&uuml;rich Airport</small>
 				</h3>
-				<p>What does this team member to? Keep it short! This is also a
-					great spot for social links!</p>
+				<p><a href="#" target="_blank" ><i class="fa fa-instagram fa-3x"></i></a>&emsp;
+				<a href="#" target="_blank" ><i class="fa fa-github fa-3x"></i></a>&emsp;
+				<a href="#" target="_blank" ><i class="fa fa-facebook fa-3x"></i></a>&emsp;
+				<a href="#" target="_blank" ><i class="fa fa-twitter fa-3x"></i></a></p>
 			</div>
 			<div class="aboutperson">
 				<img class="img-about" src="img/phong.png"
@@ -103,8 +105,10 @@
 				<h3>
 					Chiramed Phong Penglerd <small> Raiffeisen Schweiz</small>
 				</h3>
-				<p>What does this team member to? Keep it short! This is also a
-					great spot for social links!</p>
+				<p><a href="#" target="_blank" ><i class="fa fa-instagram fa-3x"></i></a>&emsp;
+				<a href="#" target="_blank" ><i class="fa fa-flickr fa-3x"></i></a>&emsp;
+				<a href="#" target="_blank" ><i class="fa fa-github fa-3x"></i></a>&emsp;
+				<a href="#" target="_blank" ><i class="fa fa-youtube fa-3x"></i></a></p>
 			</div>
 			<div class="aboutperson">
 				<img class="img-about" src="img/elia.png" alt="Elia Perenzin">
@@ -112,7 +116,9 @@
 					Elia Perenzin <small>Apperntice</small><br> <small>Hewlett-Packard
 						Enterprise</small>
 				</h3>
-				<p>I&#145;m doing an apprentice as an application developer. In my free time I love to take picture or do sports. The pictures on this website are taken by me. <a href="https://www.flickr.com/photos/eliaperenzin/" target="_blank" >Flickr</a></p>
+				<p><a href="#" target="_blank" ><i class="fa fa-instagram fa-3x"></i></a>&emsp;
+				<a href="https://www.flickr.com/photos/eliaperenzin/" target="_blank" ><i class="fa fa-flickr fa-3x"></i></a>&emsp;
+				<a href="#" target="_blank" ><i class="fa fa-github fa-3x"></i></a></p>
 			</div>
 		</div>
 	</div>

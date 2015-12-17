@@ -30,6 +30,16 @@ h1 {
 	top: 30%;
 }
 
+a:link, a:visited{
+	color: white;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+	color: grey;
+}
+
 #footer{
 	height: 20vh;
 	background-color: #555;
