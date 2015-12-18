@@ -82,14 +82,15 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		</div>
 	</div>
 		<?php
-		// if (isset ( $connections )) {
+		 if (isset ( $connections )) {
 		// var_dump($connections);
 		// echo "<br>";
 		echo "<div id='connections'>";
 		echo "<div id='inside'>";
 		echo "<h2 class='title'>", ucfirst ( $from ), " - ", ucfirst ( $to ), "</h2>";
-		$i = 0;
-		// foreach ( $connections as $connection ) { $i=$i+1 		
+		$i = 5;
+		foreach ( $connections as $connection ) { 
+			$i=$i+1; 		
 		
 		if ($i >= 1){
 			echo"<div class='connection connectioBorderTop' id='$i'>"; 
@@ -116,7 +117,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		<br>
 			<?php
 			// var_dump($connection);
-			// foreach ($connection->getJourney() as $journey){
+			 foreach ($connection->getJourney() as $journey){
 			echo "<div class='journey'>";
 			echo $journey->getName (), "<br>";
 			var_dump ( $journey->getDeparture () );
@@ -127,12 +128,12 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 			echo "<br>";
 			echo $journey->getDuration (), "<br>";
 			echo "</div>";
-			// }
+			 }
 			echo"</div>";
-					// }
+					 }
 					echo "</div>";
 					echo "</div>";
-					// } 					?>
+					 } 					?>
 	
 	<div id="aboutus">
 		<div class="about">
