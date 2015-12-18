@@ -3,59 +3,37 @@
 }
 
 .connection {
-	min-height: 30px;
-	margin: 10px 50px;
-	padding-top: 20px;
-}
-
-.connectioBorderTop {
-	border-top: 1px solid gray;
+	min-height: 20px;
+	width: 90%;
+ 	padding: 20px; 
+	margin: 30px 0;
+	border: 2px solid #000;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	background: #ffffff;
+	-webkit-box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.3);
+	box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.3);
+	text-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
 }
 
 #connections{
+	padding:20px;
+	background-color: rgba(0,0,0,0.05);
 	min-height: 100vh;
-}
-
-#inside {
-	border: 2px solid #285F88;
-	margin: 50px;
 }
 
 .item{
 	padding: 0 15px;
-	border-right: 2px solid #285F88;
-	height: 30px;
+	border-right: 2px solid #1D50E8;
 	float:left;
 	font-family: sans-serif;
 }
 
-.item div p{
-	margin-top: 7px;
-	color: black;
-}
-
-.title {
-	background: #2980b9;
-	color: #fff;
-	padding: 15px;
-	height: 40px;
-	margin-top: 0px;
-	font-family: 'Open Sans', sans-serif;
-	border-bottom: 5px solid #285F88;
-}
-
-.right {
-	float: right;
-	border: none;
-}
-
 .plusbutton{
 	float:right;
-	margin-top: -8px;
-	padding-left: 15px;
 }
 
-..details:hover{
+.plusbutton:hover{
 	float:right;
 	color:#1D50E8;
 }
