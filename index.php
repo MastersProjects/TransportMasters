@@ -10,6 +10,7 @@
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="style/style.css">
 <link rel="stylesheet" href="style/form.css">
+<link rel="stylesheet" href="style/connections.css">
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
@@ -47,14 +48,14 @@
 				"to" => $to,
 				"date" => $date,
 				"time" => $time,
-				"limit" => 4
+				"limit" => 6
 		);
 		
 		$controller = new Controller ();
 		$connections = $controller->getConnections ( $params );
 		?>
 		
-<script type="text/javascript">onload = function() {scrollToElement($(this).attr('connection'), 1500)};</script>
+<script type="text/javascript">onload = function() {scrollToElement($(this).attr('connections'), 1500)};</script>
 
 <?php } ?>
 
@@ -77,18 +78,51 @@
 			</a>
 		</div>
 	</div>
-
-	<div id="connection">
 		<?php
 		if (isset ( $connections )) {
-			var_dump($connections);
-			echo "<br>";
-			foreach ( $connections as $connection ) {
-				echo $connection->getFrom ();
-				echo $connection->getTo ();
+// 			var_dump($connections);
+// 			echo "<br>";
+			echo"<div id='connections'>";
+			echo"<h2>", ucfirst($from), " - ", ucfirst($to), "</h2>";
+			$i=0;
+			foreach ( $connections as $connection ) { $i=$i+1?>
+	
+				<div class='connection' id="<?php echo $i;?>">
+ 					<div class='item'>
+ 						<div class='departure'>09:13</div>
+ 					</div>
+					<div class='item'>
+						<div class='arrival'>09:30</div>
+					</div>
+					<div class='item'>
+						<div class='duration'>0h 17min</div>
+					</div>
+					<div class='item'>
+						<div class='changes'>0 Umstiege</div>
+					</div>
+					<div class='item'>
+						<div class='type'>S9</div>
+					</div>
+					<div class='plusbutton'>
+						<i class="fa fa-plus-circle fa-2x"></i>
+					</div><br>
+			<?php 
+				//var_dump($connection);
+					foreach ($connection->getJourney() as $journey){
+						echo "<div class='journey'>";
+							echo $journey->getName(), "<br>";
+							var_dump($journey->getDeparture()); echo "<br>";
+							var_dump($journey->getArrival()); echo "<br>";
+							var_dump($journey->getCategory()); echo "<br>";
+							echo $journey->getDuration(), "<br>";
+						echo"</div>";
+					}
+					?></div><?php
 			}
+
+			echo"</div>";
 		}?>
-	</div>
+	
 	<div id="aboutus">
 		<div class="about">
 			<div class="aboutperson">

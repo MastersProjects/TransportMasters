@@ -1,0 +1,39 @@
+.journey {
+	display: none;
+}
+
+.connection {
+	min-height: 20px;
+	width: 90%;
+ 	padding: 20px; 
+	margin: 30px 0;
+	border: 2px solid #000;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	background: #ffffff;
+	-webkit-box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.3);
+	box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.3);
+	text-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+}
+
+#connections{
+	padding:20px;
+	background-color: rgba(0,0,0,0.05);
+	min-height: 100vh;
+}
+
+.item{
+	padding: 0 15px;
+	border-right: 2px solid #1D50E8;
+	float:left;
+	font-family: sans-serif;
+}
+
+.plusbutton{
+	float:right;
+}
+
+.plusbutton:hover{
+	float:right;
+	color:#1D50E8;
+}

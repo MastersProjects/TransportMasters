@@ -14,3 +14,8 @@ function scrollToElement (el, ms) {
     scrollTop: $(el).offset().top
   }, speed);
 }
+
+$('.connection').click(function(e) {
+		$(e.currentTarget).children().show();
+		$(e.currentTarget).css("border-color", "#1D50E8");
+	});

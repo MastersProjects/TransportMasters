@@ -22,6 +22,9 @@ class JSONParser {
 					$connection->setFrom ( $result->from->station->name );
 					$connection->setTo ( $result->to->station->name );
 					
+					$connection->setArivallTime( $result->to->arrival );
+					$connection->setDepartureTime( $result->from->departure );
+					
 					$connection->setDuration ( $result->duration );
 					$connection->setTransfers ( $result->transfers );
 					
