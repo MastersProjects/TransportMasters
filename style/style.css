@@ -64,6 +64,11 @@ a:hover{
 	width: 30%;
 }
 
+.footerright {
+	float: left;
+	width: 70%;
+}
+
 @media ( min-width : 1071px) {
 	#aboutus {
 		height: 100vh;
