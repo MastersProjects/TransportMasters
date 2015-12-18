@@ -49,25 +49,29 @@ a:hover{
 	font-size: 18px;
 	font-family: Arial;
 	text-align: center;
-	border-top: 1px solid gray; 
-	width: 100%;
 	padding-top: 15px;
 }
 
 #containerfooter{
-	width: 75%;
+	width: 50%;
 	margin: 0 auto;
-	padding: 15px;
+	padding: 15px 15px 15px 0;
 }
 
 #leftfooter{
 	float: left;
-	width: 30%;
+	width: 33%;
 }
 
 #rightfooter {
 	float: left;
-	width: 70%;
+	border-left: 1px solid gray; 
+	width: 50%;
+	height: 150px;
+}
+
+#rightfooter p {
+	padding: 40px 40px;
 }
 
 .clear {

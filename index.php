@@ -190,19 +190,11 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 				<img alt="logo" src="img/masters2.gif" width="300px" height="150px">
 			</div>
 			<div id="rightfooter">
-				<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-					nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-					erat, sed diam voluptua. At vero eos et accusam et justo duo
-					dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-					sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-					consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-					ut labore et dolore magna aliquyam erat, sed diam v oluptua. At
-					vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-					kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-					amet.</p>
+				<p>&copy; <?php echo date("Y"); ?> - Masters-Projects <br/>
+				Phong Penglerd, Elia Perenzin und Luca Marti</p>
 			</div>
 		<div class="clear"></div>
-		<h1>&copy; - Masters-Projects | Masters GmbH</h1>
+		<h1></h1>
 		</div>
 	</div>
 	<script src="style/scroll.js"></script>

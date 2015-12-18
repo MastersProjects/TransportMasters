@@ -16,7 +16,5 @@ function scrollToElement (el, ms) {
 //Open journey details clicklistener and function
 $('.connection').click(function(e) {
 	$(".journey").hide();
-	$(".connection").css("border-color", "#000");
 	$(e.currentTarget).children().show();
-	$(e.currentTarget).css("border-color", "#1D50E8");
 });
