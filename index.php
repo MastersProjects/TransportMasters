@@ -82,59 +82,50 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		</div>
 	</div>
 		<?php
-		 if (isset ( $connections )) {
-		// var_dump($connections);
-		// echo "<br>";
+		if (isset ( $connections )) {
 		echo "<div id='connections'>";
 		echo "<div id='inside'>";
 		echo "<h2 class='title'>", ucfirst ( $from ), " - ", ucfirst ( $to ), "</h2>";
-		$i = 5;
+		$i = 0;
 		foreach ( $connections as $connection ) { 
-			$i=$i+1; 		
+			$i=$i+1; ?>
+			
+			<div class='connection' id="<?php echo $i;?>">
+			<div class='item'>
+				<div class='departure'><p>09:13 - 09:30</p></div>
+			</div>
+			<div class='item'>
+				<div class='duration'><p>17min</p></div>
+			</div>
+			<div class='item'>
+				<div class='changes'><p>0 Umstiege</p></div>
+			</div>
+			<div class='item'>
+				<div class='type'><p>S9</p></div>
+			</div>
+			<div class='item right'>
+				<div class='details'><p>Details anzeigen<i class="fa fa-plus-circle fa-2x plusbutton"></i></p></div>
+			</div><br>
 		
-		if ($i >= 1){
-			echo"<div class='connection connectioBorderTop' id='$i'>"; 
-		} else {
-			echo"<div class='connection' id='$i'>"; 
-		}
-		?>
-		
-		<div class='item'>
-			<div class='departure'><p>09:13 - 09:30</p></div>
-		</div>
-		<div class='item'>
-			<div class='duration'><p>17min</p></div>
-		</div>
-		<div class='item'>
-			<div class='changes'><p>0 Umstiege</p></div>
-		</div>
-		<div class='item'>
-			<div class='type'><p>S9</p></div>
-		</div>
-		<div class='item right'>
-			<div class='details'><p>Details anzeigen<i class="fa fa-plus-circle fa-2x plusbutton"></i></p></div>
-		</div>
-		<br>
 			<?php
 			// var_dump($connection);
-			 foreach ($connection->getJourney() as $journey){
-			echo "<div class='journey'>";
-			echo $journey->getName (), "<br>";
-			var_dump ( $journey->getDeparture () );
-			echo "<br>";
-			var_dump ( $journey->getArrival () );
-			echo "<br>";
-			var_dump ( $journey->getCategory () );
-			echo "<br>";
-			echo $journey->getDuration (), "<br>";
-			echo "</div>";
-			 }
-			echo"</div>";
-					 }
+			foreach ($connection->getJourney() as $journey){
+				echo "<div class='journey'>";
+					echo $journey->getName (), "<br>";
+					var_dump ( $journey->getDeparture () );
+					echo "<br>";
+					var_dump ( $journey->getArrival () );
+					echo "<br>";
+					var_dump ( $journey->getCategory () );
+					echo "<br>";
+					echo $journey->getDuration (), "<br>";
+				echo "</div>";
+			}
+			?></div><?php
+				}
 					echo "</div>";
-					echo "</div>";
-					 } 					?>
-	
+				 } ?>
+				 
 	<div id="aboutus">
 		<div class="about">
 			<div class="aboutperson">
@@ -178,7 +169,6 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		</div>
 	</div>
 	<div id="footer">
-	
 		<h1>&copy; - Wer will cha en sch&ouml;ne Footer mache :D</h1>
 
 	</div>
