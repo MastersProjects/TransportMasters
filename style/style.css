@@ -41,7 +41,6 @@ a:hover{
 }
 
 #footer{
-	height: auto;
 	background-color: #555;
 }
 
@@ -55,6 +54,7 @@ a:hover{
 #containerfooter{
 	width: 50%;
 	margin: 0 auto;
+	height: auto;
 	padding: 15px 15px 15px 0;
 }
 
@@ -111,6 +111,30 @@ a:hover{
 	}
 }
 
+@media (min-width: 1071px) and (max-width: 1400px){
+	#containerfooter {
+		width: 70%;
+	}
+	#leftfooter {
+		width: 300px;
+	}
+	
+	#leftfooter img {
+		width: 300px;
+		height: 150px;
+	}
+	
+	#rightfooter p{
+		width: 200px;
+		padding: 40px 0 0 10px;
+		margin: 0;
+	}
+	
+	#rightfooter {
+		height: 150px;
+	}
+}
+
 @media ( min-width: 717px) and (max-width: 1070px) {
 	#aboutus {
 		height: 120vh;
@@ -141,6 +165,28 @@ a:hover{
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 10px
+	}
+	
+	#containerfooter {
+		width: 75%;
+	}
+	#leftfooter {
+		width: 200px;
+	}
+	
+	#leftfooter img {
+		width: 200px;
+		height: 100px;
+	}
+	
+	#rightfooter p{
+		width: 300px;
+		padding: 20px 0 0 10px;
+		margin: 0;
+	}
+	
+	#rightfooter {
+		height: 100px;
 	}
 }
 
@@ -179,6 +225,25 @@ a:hover{
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 10px
+	}
+	#leftfooter {
+		width: 100px;
+	}
+	
+	#leftfooter img {
+		width: 100px;
+		height: 50px;
+	}
+	
+	#rightfooter p{
+		width: 225px;
+		padding: 0 0 0 10px;
+		margin: 0;
+	}
+	
+	#rightfooter {
+		height: 50px;
+	}
 }
 
 
