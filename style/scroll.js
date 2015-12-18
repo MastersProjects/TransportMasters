@@ -15,7 +15,6 @@ function scrollToElement (el, ms) {
   }, speed);
 }
 
-$('.connection').click(function(e) {
+$('.connections').click(function(e) {
 		$(e.currentTarget).children().show();
-		$(e.currentTarget).css("border-color", "#1D50E8");
 	});
