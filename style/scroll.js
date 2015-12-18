@@ -1,13 +1,11 @@
+//Click listener for scroll annimation
 $('.click').click(function(e) {
-  // prevent default action
   e.preventDefault();
 
-  // get id of target div (placed in href attribute of anchor element)
-  // and pass it to the scrollToElement function
-  // also, use 2000 as an argument for the scroll speed (2 seconds, 2000 milliseconds)
   scrollToElement($(this).attr('href'), 1500);
 });
 
+//scroll animation
 function scrollToElement (el, ms) {
   var speed = (ms) ? ms : 600;
   $('html,body').animate({
@@ -15,7 +13,10 @@ function scrollToElement (el, ms) {
   }, speed);
 }
 
+//Open journey details clicklistener and function
 $('.connection').click(function(e) {
-		$(e.currentTarget).children().show();
-		$(e.currentTarget).css("border-color", "#1D50E8");
-	});
+	$(".journey").hide();
+	$(".connection").css("border-color", "#000");
+	$(e.currentTarget).children().show();
+	$(e.currentTarget).css("border-color", "#1D50E8");
+});
