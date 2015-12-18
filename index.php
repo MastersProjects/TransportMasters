@@ -128,8 +128,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 			echo $journey->getDuration (), "<br>";
 			echo "</div>";
 			// }
-			?></div>
-			<?php
+			echo"</div>";
 					// }
 					echo "</div>";
 					echo "</div>";
