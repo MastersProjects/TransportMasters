@@ -43,14 +43,15 @@ a:hover{
 #footer{
 	height: auto;
 	background-color: #555;
-
 }
 
-#footer h1{
+#containerfooter h1{
 	font-size: 18px;
 	font-family: Arial;
 	text-align: center;
-	padding-top:50px	
+	border-top: 1px solid gray; 
+	width: 100%;
+	padding-top: 15px;
 }
 
 #containerfooter{
@@ -59,14 +60,19 @@ a:hover{
 	padding: 15px;
 }
 
-.footerleft{
+#leftfooter{
 	float: left;
 	width: 30%;
 }
 
-.footerright {
+#rightfooter {
 	float: left;
 	width: 70%;
+}
+
+.clear {
+	clear: both;
+	float: none;
 }
 
 @media ( min-width : 1071px) {

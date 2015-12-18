@@ -17,7 +17,8 @@
 <script src="style/randomimg.js"></script>
 <script src="style/scroll.js"></script>
 
-<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans'
+	rel='stylesheet' type='text/css'>
 
 </head>
 <body>
@@ -83,34 +84,48 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 	</div>
 		<?php
 		if (isset ( $connections )) {
-		echo "<div id='connections'>";
-		echo "<div id='inside'>";
-		echo "<h2 class='title'>", ucfirst ( $from ), " - ", ucfirst ( $to ), "</h2>";
-		$i = 0;
-		foreach ( $connections as $connection ) { 
-			$i=$i+1; ?>
+			echo "<div id='connections'>";
+			echo "<div id='inside'>";
+			echo "<h2 class='title'>", ucfirst ( $from ), " - ", ucfirst ( $to ), "</h2>";
+			$i = 0;
+			foreach ( $connections as $connection ) {
+				$i = $i + 1;
+				?>
 			
 			<div class='connection' id="<?php echo $i;?>">
-			<div class='item'>
-				<div class='departure'><p>09:13 - 09:30</p></div>
+		<div class='item'>
+			<div class='departure'>
+				<p>09:13 - 09:30</p>
 			</div>
-			<div class='item'>
-				<div class='duration'><p>17min</p></div>
+		</div>
+		<div class='item'>
+			<div class='duration'>
+				<p>17min</p>
 			</div>
-			<div class='item'>
-				<div class='changes'><p>0 Umstiege</p></div>
+		</div>
+		<div class='item'>
+			<div class='changes'>
+				<p>0 Umstiege</p>
 			</div>
-			<div class='item'>
-				<div class='type'><p>S9</p></div>
+		</div>
+		<div class='item'>
+			<div class='type'>
+				<p>S9</p>
 			</div>
-			<div class='item right'>
-				<div class='details'><p>Details anzeigen<i class="fa fa-plus-circle fa-2x plusbutton"></i></p></div>
-			</div><br>
+		</div>
+		<div class='item right'>
+			<div class='details'>
+				<p>
+					Details anzeigen<i class="fa fa-plus-circle fa-2x plusbutton"></i>
+				</p>
+			</div>
+		</div>
+		<br>
 		
 			<?php
-			// var_dump($connection);
-			foreach ($connection->getJourney() as $journey){
-				echo "<div class='journey'>";
+				// var_dump($connection);
+				foreach ( $connection->getJourney () as $journey ) {
+					echo "<div class='journey'>";
 					echo $journey->getName (), "<br>";
 					var_dump ( $journey->getDeparture () );
 					echo "<br>";
@@ -119,12 +134,13 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 					var_dump ( $journey->getCategory () );
 					echo "<br>";
 					echo $journey->getDuration (), "<br>";
-				echo "</div>";
-			}
-			?></div><?php
-				}
 					echo "</div>";
-				 } ?>
+				}
+				?></div><?php
+			}
+			echo "</div>";
+		}
+		?>
 				 
 	<div id="aboutus">
 		<div class="about">
@@ -169,8 +185,25 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		</div>
 	</div>
 	<div id="footer">
-		<h1>&copy; - Wer will cha en sch&ouml;ne Footer mache :D</h1>
-
+		<div id="containerfooter">
+			<div id="leftfooter">
+				<img alt="logo" src="img/masters2.gif" width="300px" height="150px">
+			</div>
+			<div id="rightfooter">
+				<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+					nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+					erat, sed diam voluptua. At vero eos et accusam et justo duo
+					dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+					sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+					consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+					ut labore et dolore magna aliquyam erat, sed diam v oluptua. At
+					vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+					kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+					amet.</p>
+			</div>
+		<div class="clear"></div>
+		<h1>&copy; - Masters-Projects | Masters GmbH</h1>
+		</div>
 	</div>
 	<script src="style/scroll.js"></script>
 </body>
