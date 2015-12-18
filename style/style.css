@@ -41,7 +41,7 @@ a:hover{
 }
 
 #footer{
-	height: 20vh;
+	height: auto;
 	background-color: #555;
 
 }
@@ -51,6 +51,17 @@ a:hover{
 	font-family: Arial;
 	text-align: center;
 	padding-top:50px	
+}
+
+#containerfooter{
+	width: 75%;
+	margin: 0 auto;
+	padding: 15px;
+}
+
+.footerleft{
+	float: left;
+	width: 30%;
 }
 
 @media ( min-width : 1071px) {
