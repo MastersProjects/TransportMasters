@@ -92,9 +92,9 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		// foreach ( $connections as $connection ) { $i=$i+1 		
 		
 		if ($i >= 1){
-			?><div class='connection connectioBorderTop' id="<?php echo $i;?>"><?php 
+			echo"<div class='connection connectioBorderTop' id='$i'>"; 
 		} else {
-			?><div class='connection' id="<?php echo $i;?>"><?php 
+			echo"<div class='connection' id='$i'>"; 
 		}
 		?>
 		
