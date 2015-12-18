@@ -246,5 +246,27 @@ a:hover{
 	}
 }
 
+@media (max-width: 466px){
+	#leftfooter {
+		width: 75px;
+	}
+	
+	#leftfooter img {
+		width: 75px;
+		height: 37px;
+	}
+	
+	#rightfooter p{
+		width: 225px;
+		padding: 0 0 0 10px;
+		font-size: 0.8em;
+		margin: 0;
+	}
+	
+	#rightfooter {
+		height: 37px;
+	}
+}
+
 
 
