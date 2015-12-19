@@ -13,12 +13,13 @@
 }
 
 #connections{
-	min-height: 100vh;
+	height: 100vh;
+	padding: 50px 0;
 }
 
 #inside {
 	border: 2px solid #285F88;
-	margin: 50px;
+	margin: 0 50px;
 }
 
 .item{

@@ -85,6 +85,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		<?php
 		if (isset ( $connections )) {
 			echo "<div id='connections'>";
+ 		if (!empty($connections)){
 			echo "<div id='inside'>";
 			echo "<h2 class='title'>", ucfirst ( $from ), " - ", ucfirst ( $to ), "</h2>";
 			$i = 0;
@@ -95,17 +96,17 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 			<div class='connection' id="<?php echo $i;?>">
 		<div class='item'>
 			<div class='departure'>
-				<p>09:13 - 09:30</p>
+				<p><?php echo $connection->getDepartureTime()?></p>
 			</div>
 		</div>
 		<div class='item'>
 			<div class='duration'>
-				<p>17min</p>
+				<p><?php echo trim(substr($connection->getDuration(),3,1),0) . substr($connection->getDuration(), 4, 4), "'";?></p>
 			</div>
 		</div>
 		<div class='item'>
 			<div class='changes'>
-				<p>0 Umstiege</p>
+				<p><?php echo $connection->getTransfers(), " Umstiege"?></p>
 			</div>
 		</div>
 		<div class='item'>
@@ -137,9 +138,14 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 					echo "</div>";
 				}
 				?></div><?php
-			}
-			echo "</div>";
-		}
+			} 
+			
+ 		} else {
+				//ToDo
+				echo "Something went wrong!";
+				}
+				echo "</div>";
+		} 
 		?>
 				 
 	<div id="aboutus">

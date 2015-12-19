@@ -15,6 +15,10 @@ function scrollToElement (el, ms) {
 
 //Open journey details clicklistener and function
 $('.connection').click(function(e) {
-	$(".journey").hide();
-	$(e.currentTarget).children().show();
+	if($(e.currentTarget).children('.journey').is(":visible")){
+		$(".journey").hide();
+	} else {
+		$(".journey").hide();
+		$(e.currentTarget).children().show();
+	}
 });
