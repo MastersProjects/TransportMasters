@@ -88,7 +88,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
  		if (!empty($connections)){
 			echo "<div id='inside'>";
 			//ToDo get Real destinations
-			echo "<h2 class='title'>", ucfirst ( $from ), " - ", ucfirst ( $to ), "<br><small>", date('d.m.Y', strtotime($connections[0]->getDepartureTime())), "</small></h2>";
+			echo "<h2 class='title'>", $connections[0]->getFrom(), " - ", $connections[0]->getTo(), "<br><small>", date('d.m.Y', strtotime($connections[0]->getDepartureTime())), "</small></h2>";
  			//echo "<h2>", date('H:i', strtotime($connections[0]->getDepartureTime())), "</h2>";
 
 			$i = 0;
