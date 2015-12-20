@@ -8,10 +8,6 @@
 	padding-top: 20px;
 }
 
-.connectioBorderTop {
-	border-top: 1px solid gray;
-}
-
 #connections{
 	height: 100vh;
 	padding: 50px 0;
@@ -39,7 +35,7 @@
 	background: #2980b9;
 	color: #fff;
 	padding: 15px;
-	height: 40px;
+	height: 60px;
 	margin-top: 0px;
 	font-family: 'Open Sans', sans-serif;
 	border-bottom: 5px solid #285F88;

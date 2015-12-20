@@ -87,16 +87,19 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 			echo "<div id='connections'>";
  		if (!empty($connections)){
 			echo "<div id='inside'>";
-			echo "<h2 class='title'>", ucfirst ( $from ), " - ", ucfirst ( $to ), "</h2>";
+			//ToDo get Real destinations
+			echo "<h2 class='title'>", ucfirst ( $from ), " - ", ucfirst ( $to ), "<br><small>", date('d.m.Y', strtotime($connections[0]->getDepartureTime())), "</small></h2>";
+ 			//echo "<h2>", date('H:i', strtotime($connections[0]->getDepartureTime())), "</h2>";
+
 			$i = 0;
 			foreach ( $connections as $connection ) {
 				$i = $i + 1;
-				?>
-			
+			?>
+		
 			<div class='connection' id="<?php echo $i;?>">
 		<div class='item'>
 			<div class='departure'>
-				<p><?php echo $connection->getDepartureTime()?></p>
+				<p><?php echo date('H:i', strtotime($connection->getDepartureTime())), " - ", date('H:i', strtotime($connection->getArivallTime()))?></p>
 			</div>
 		</div>
 		<div class='item'>
@@ -111,7 +114,10 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		</div>
 		<div class='item'>
 			<div class='type'>
-				<p>S9</p>
+				<p><?php foreach ($connection->getJourney() as $journey){
+					echo " -> ", $journey->getCategory();
+				}
+					?></p>
 			</div>
 		</div>
 		<div class='item right'>
