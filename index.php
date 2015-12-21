@@ -131,26 +131,34 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		
 			<?php
 				// var_dump($connection);
-				foreach ( $connection->getJourney () as $journey ) {
-					echo "<div class='journey'>";
-					echo $journey->getName (), "<br>";
-					var_dump ( $journey->getDeparture () );
-					echo "<br>";
-					var_dump ( $journey->getArrival () );
-					echo "<br>";
-					var_dump ( $journey->getCategory () );
-					echo "<br>";
-					echo $journey->getDuration (), "<br>";
-					echo "</div>";
-				}
+				foreach ( $connection->getJourney () as $journey ) {?>
+				<div class='journey'>
+					<br><table>
+						<tr>
+							<td><?php echo date('H:i', strtotime($journey->getDeparture()->getTime()));?></td>
+							<td><?php echo $journey->getDeparture()->getLocation();?></td>
+							<td><?php echo $journey->getDeparture()->getPlatform();?></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>IC 811</td>
+						</tr>
+						<tr>
+							<td><?php echo date('H:i', strtotime($journey->getArrival()->getTime()));?></td>
+							<td><?php echo $journey->getArrival()->getLocation();?></td>
+							<td><?php echo $journey->getArrival()->getPlatform();?></td>
+						</tr>
+					</table>
+					</div>
+				<?php }
 				?></div><?php
 			} 
 			
  		} else {
 				//ToDo
-				echo "Something went wrong!";
-				}
-				echo "</div>";
+			echo "Something went wrong!";
+		}
+			echo "</div>";
 		} 
 		?>
 				 
