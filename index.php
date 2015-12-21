@@ -16,7 +16,6 @@
 <script src="//code.jquery.com/jquery-1.10.2.js"></script> 
 
 <script src="style/randomimg.js"></script>
-<script src="style/scroll.js"></script>
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans'
 	rel='stylesheet' type='text/css'>
@@ -219,5 +218,6 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		</div>
 	</div>
 	<script src="style/scroll.js"></script>
+	<script src="style/autocomplete.js"></script>
 </body>
 </html>
