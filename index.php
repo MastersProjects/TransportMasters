@@ -152,7 +152,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 						</tr>
 						<tr>
 							<td></td>
-							<td>IC 811</td>
+							<td><?php echo $journey->getName();?></td>
 						</tr>
 						<tr>
 							<td><?php echo date('H:i', strtotime($journey->getArrival()->getTime()));?></td>
@@ -172,7 +172,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 			echo "</div>";
 		} 
 		?>
-				 
+	</div>		 
 	<div id="aboutus">
 		<div class="about">
 			<div class="aboutperson">
@@ -227,7 +227,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		<div class="clear"></div>
 		<h1></h1>
 		</div>
-	</div>
+
 <!-- Our javascripts for scroll an autocomplete -->
 	<script src="style/scroll.js"></script>
 	<script src="style/autocomplete.js"></script>
