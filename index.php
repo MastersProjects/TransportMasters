@@ -14,9 +14,15 @@
 <link rel="stylesheet" href="style/style.css">
 <link rel="stylesheet" href="style/form.css">
 <link rel="stylesheet" href="style/connections.css">
+<link rel="stylesheet" href="style/style.css">
 
 <!-- Jquery library -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<!-- For auto suggestion jquery library and style -->
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
 
 <!-- JS for random background img -->
 <script src="style/randomimg.js"></script>
@@ -68,8 +74,12 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 			<div class="form">
 				<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"
 					method="post">
+					<div class="ui-widget">
 					<input type="text" class="input" name="from" placeholder="Von" />
+					</div>
+					<div class="ui-widget">
 					<input type="text" class="input" name="to" placeholder="Bis"/>
+					</div>
 					<input type="date" name="date"
 						value="<?php print(date("Y-m-d")); ?>"> <input type="time"
 						name="time" value="<?php print(date("H:i")); ?>"> <input
