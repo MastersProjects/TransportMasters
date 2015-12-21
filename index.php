@@ -2,23 +2,24 @@
 <html>
 <head>
 <title>TransportMasters</title>
+<!-- Zoom for mobilephones -->
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 <!-- import style sheet for the icons -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<!-- our stylesheets -->
 <link rel="stylesheet" href="style/style.css">
 <link rel="stylesheet" href="style/form.css">
 <link rel="stylesheet" href="style/connections.css">
 
+<!-- Jquery library -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="//code.jquery.com/jquery-1.10.2.js"></script> 
 
+<!-- JS for random background img -->
 <script src="style/randomimg.js"></script>
-
-<link href='https://fonts.googleapis.com/css?family=Open+Sans'
-	rel='stylesheet' type='text/css'>
 
 </head>
 <body>
@@ -217,6 +218,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		<h1></h1>
 		</div>
 	</div>
+<!-- Our javascripts for scroll an autocomplete -->
 	<script src="style/scroll.js"></script>
 	<script src="style/autocomplete.js"></script>
 </body>
