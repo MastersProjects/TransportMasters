@@ -13,7 +13,8 @@
 <link rel="stylesheet" href="style/connections.css">
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script> 
+
 <script src="style/randomimg.js"></script>
 <script src="style/scroll.js"></script>
 
@@ -67,8 +68,8 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 			<div class="form">
 				<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"
 					method="post">
-					<input type="text" name="from" placeholder="Von" autocomplete="off" />
-					<input type="text" name="to" placeholder="Bis" autocomplete="off" />
+					<input type="text" class="input" name="from" placeholder="Von" />
+					<input type="text" class="input" name="to" placeholder="Bis"/>
 					<input type="date" name="date"
 						value="<?php print(date("Y-m-d")); ?>"> <input type="time"
 						name="time" value="<?php print(date("H:i")); ?>"> <input
