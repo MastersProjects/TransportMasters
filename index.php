@@ -2,6 +2,25 @@
 <html>
 <head>
 <title>TransportMasters</title>
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+<link rel="manifest" href="img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
 <!-- Zoom for mobilephones -->
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -35,14 +54,24 @@ require_once ('model/Journey.php');
 require_once ('model/JourneyDetails.php');
 require_once ('Controller.php');
 
+$fromstyle = "";
+$tostyle = "";
 if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 	// We can do validation here
-	if (isset ( $_POST ['from'] )) {
+	$validation = [];
+	if (!(empty( $_POST ['from'] ))) {
 		$from = $_POST ['from'];
+		$validation[0] = true;
+	} else {
+		$validation[0] = false;
+		$fromstyle = "error";
 	}
-	
-	if (isset ( $_POST ['to'] )) {
+	if (!(empty( $_POST ['to'] ))) {
 		$to = $_POST ['to'];
+		$validation[1] = true;
+	} else {
+		$validation[1] = false;
+		$tostyle = "error";
 	}
 	
 	if (isset ( $_POST ['date'] )) {
@@ -53,6 +82,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		$time = $_POST ['time'];
 	}
 	
+	if($validation[0] == true && $validation[1] == true){
 	$params = array (
 			"from" => $from,
 			"to" => $to,
@@ -67,18 +97,18 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		
 <script type="text/javascript">onload = function() {scrollToElement($(this).attr('connections'), 1500)};</script>
 
-<?php } ?>
-
+<?php } 
+	} ?>
 	<div class="imgheader">
 		<div class="formbackground">
 			<div class="form">
 				<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"
 					method="post">
 					<div class="ui-widget">
-					<input type="text" class="input" name="from" placeholder="Von" />
+					<input type="text" id="<?php echo $fromstyle;?>" class="input" name="from" placeholder="Von" autocomplete="off" />
 					</div>
 					<div class="ui-widget">
-					<input type="text" class="input" name="to" placeholder="Bis"/>
+					<input type="text" id="<?php echo $tostyle;?>" class="input" name="to" placeholder="Bis" autocomplete="off"/>
 					</div>
 					<input type="date" name="date"
 						value="<?php print(date("Y-m-d")); ?>"> <input type="time"
@@ -171,8 +201,9 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		}
 			echo "</div>";
 		} 
+		echo "</div>";
 		?>
-	</div>		 
+		 
 	<div id="aboutus">
 		<div class="about">
 			<div class="aboutperson">
@@ -227,7 +258,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		<div class="clear"></div>
 		<h1></h1>
 		</div>
-
+	</div>
 <!-- Our javascripts for scroll an autocomplete -->
 	<script src="style/scroll.js"></script>
 	<script src="style/autocomplete.js"></script>

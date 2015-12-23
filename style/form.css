@@ -56,6 +56,11 @@
     border: 1px solid #1D50E8;
 }
 
+#error:focus, #error{
+	 border: 1px solid red;
+	 box-shadow: 0 0 5px red;
+}
+
 .form input[type="submit"],
 .form input[type="button"]{
     box-sizing: border-box;

@@ -11,3 +11,8 @@ var randomNum = Math.floor((Math.random() * upperLimit) + 1);
  });
 
  });
+
+
+function errorInput (field) {
+	document.getElementById("from").style.color = "blue";
+};

@@ -86,7 +86,7 @@ a:hover{
 @media ( min-width : 1071px) {
 	#aboutus {
 		height: 100vh;
-		background-image: url("../img/bike_zurich.png");
+		background-image: url("../img/background_about_us.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 		visibility: inherit;
@@ -142,7 +142,7 @@ a:hover{
 @media ( min-width: 717px) and (max-width: 1070px) {
 	#aboutus {
 		height: 120vh;
-		background-image: url("../img/bike_zurich.png");
+		background-image: url("../img/background_about_us.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 		visibility: inherit;
@@ -202,7 +202,7 @@ a:hover{
 @media (max-width: 716px) {
 	#aboutus {
 		height: 180vh;
-		background-image: url("../img/bike_zurich.png");
+		background-image: url("../img/background_about_us.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 		visibility: inherit;
