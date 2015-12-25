@@ -26,6 +26,12 @@ h1 {
 	margin: 0 50%
 }
 
+.buttonBottom2 {
+	position: absolute;
+	bottom: 0;
+	margin: 0 50%
+}
+
 .formbackground {
 	height: 315px;
 	width: 100%;

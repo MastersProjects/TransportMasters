@@ -199,9 +199,13 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 				//ToDo
 			echo "Something went wrong!";
 		}
-			echo "</div>";
+			echo "</div><div class=\"buttonBottom2\">
+			<a href=\"#aboutus\" class=\"click\"> <i
+				class=\"fa fa-chevron-circle-down fa-3x\" style=\"color: #1D50E8\"></i>
+			</a>
+		</div>";
 		} 
-		echo "</div>";
+		echo "</div> "
 		?>
 		 
 	<div id="aboutus">
@@ -225,10 +229,10 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 					Chiramed Phong Penglerd <small> Raiffeisen Schweiz</small>
 				</h3>
 				<p>
-					<a href="#" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>&emsp;
+					<a href="https://www.youtube.com/user/Phong6698" target="_blank"><i class="fa fa-youtube fa-3x"></i></a>&emsp;
 					<a href="#" target="_blank"><i class="fa fa-flickr fa-3x"></i></a>&emsp;
 					<a href="#" target="_blank"><i class="fa fa-github fa-3x"></i></a>&emsp;
-					<a href="#" target="_blank"><i class="fa fa-youtube fa-3x"></i></a>
+					<a href="#" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>
 				</p>
 			</div>
 			<div class="aboutperson">
