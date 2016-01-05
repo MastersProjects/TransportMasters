@@ -73,8 +73,23 @@
 	color: #1D50E8;
 }
 
-@media (max-width: 800px){
-	.visibleFalse{
-		visibility: hidden;
+@media ( max-width : 880px) {
+	.visibleFalse {
+		display: none;
+	}
+	.right {
+		float: right;
+		border: none;
+		width: 0px;
+	}
+}
+
+@media ( max-width : 730px) {
+	.type{
+		display: none;
+	}
+	
+	.norightborder{
+		width: 0px;
 	}
 }
