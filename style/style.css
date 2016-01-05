@@ -20,6 +20,10 @@ h1 {
 	clear: both;
 }
 
+.norightborder {
+	border-right: none;
+}
+
 .buttonBottom {
 	position: absolute;
 	bottom: 0;

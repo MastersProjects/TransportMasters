@@ -153,7 +153,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 				<p><?php echo $connection->getTransfers(), " Umstiege"?></p>
 			</div>
 		</div>
-		<div class='item'>
+		<div class='item norightborder'>
 			<div class='type'>
 				<p><?php foreach ($connection->getJourney() as $journey){
 					echo " -> ", $journey->getCategory();
