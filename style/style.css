@@ -56,10 +56,11 @@ a:hover{
 
 #footer {
 	background-color: #555;
+	margin-bottom: 15px;
 	min-height: 50px;
 	height: auto;
-	margin-top: -30px;
-	margin-bottom: 15px;
+	max-height: 100px;
+	margin-top: -20px;
 }
 
 #footercenter {
