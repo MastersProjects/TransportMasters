@@ -225,11 +225,7 @@ foreach ( $connection->getJourney () as $journey ) {
 				// ToDo
 				echo "Something went wrong!";
 			}
-			echo "</div><div class=\"buttonBottom2\">
-			<a href=\"#aboutus\" class=\"click\"> <i
-				class=\"fa fa-chevron-circle-down fa-3x\" style=\"color: #1D50E8\"></i>
-			</a>
-		</div>";
+			echo "</div>";
 		}
 		echo "</div> "?>
 		 
