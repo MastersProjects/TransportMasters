@@ -54,38 +54,22 @@ a:hover{
 	color: grey;
 }
 
-#footer{
+#footer {
 	background-color: #555;
-}
-
-#containerfooter h1{
-	font-size: 18px;
-	font-family: Arial;
-	text-align: center;
-	padding-top: 15px;
-}
-
-#containerfooter{
-	width: 50%;
-	margin: 0 auto;
+	min-height: 50px;
 	height: auto;
-	padding: 15px 15px 15px 0;
+	margin-top: -30px;
+	margin-bottom: 15px;
 }
 
-#leftfooter{
-	float: left;
-	width: 300px;
+#footercenter {
+	margin: 0 auto;
+	width: 95%;
 }
 
-#rightfooter {
-	float: left;
-	border-left: 1px solid gray; 
-	width: 55%;
-	height: 150px;
-}
-
-#rightfooter p {
-	padding: 40px 40px;
+#footercenter p {
+	padding-top: 15px;
+	text-align: center;
 }
 
 .clear {

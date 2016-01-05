@@ -3,22 +3,36 @@
 <head>
 <title>TransportMasters</title>
 <!-- Favicons -->
-<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="57x57"
+	href="img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60"
+	href="img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72"
+	href="img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76"
+	href="img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114"
+	href="img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120"
+	href="img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144"
+	href="img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152"
+	href="img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180"
+	href="img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"
+	href="img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32"
+	href="img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96"
+	href="img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16"
+	href="img/favicon/favicon-16x16.png">
 <link rel="manifest" href="img/favicon/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+<meta name="msapplication-TileImage"
+	content="img/favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
 <!-- Zoom for mobilephones -->
@@ -39,9 +53,11 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <!-- For auto suggestion jquery library and style -->
-<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css" />
+<link rel="stylesheet"
+	href="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+<script
+	src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
 
 <!-- JS for random background img -->
 <script src="style/randomimg.js"></script>
@@ -58,19 +74,19 @@ $fromstyle = "";
 $tostyle = "";
 if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 	// We can do validation here
-	$validation = [];
-	if (!(empty( $_POST ['from'] ))) {
+	$validation = array ();
+	if (! (empty ( $_POST ['from'] ))) {
 		$from = $_POST ['from'];
-		$validation[0] = true;
+		$validation [0] = true;
 	} else {
-		$validation[0] = false;
+		$validation [0] = false;
 		$fromstyle = "error";
 	}
-	if (!(empty( $_POST ['to'] ))) {
+	if (! (empty ( $_POST ['to'] ))) {
 		$to = $_POST ['to'];
-		$validation[1] = true;
+		$validation [1] = true;
 	} else {
-		$validation[1] = false;
+		$validation [1] = false;
 		$tostyle = "error";
 	}
 	
@@ -82,33 +98,38 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		$time = $_POST ['time'];
 	}
 	
-	if($validation[0] == true && $validation[1] == true){
-	$params = array (
-			"from" => $from,
-			"to" => $to,
-			"date" => $date,
-			"time" => $time,
-			"limit" => 6 
-	);
-	
-	$controller = new Controller ();
-	$connections = $controller->getConnections ( $params );
-	?>
+	if ($validation [0] == true && $validation [1] == true) {
+		$params = array (
+				"from" => $from,
+				"to" => $to,
+				"date" => $date,
+				"time" => $time,
+				"limit" => 6 
+		);
+		
+		$controller = new Controller ();
+		$connections = $controller->getConnections ( $params );
+		?>
 		
 <script type="text/javascript">onload = function() {scrollToElement($(this).attr('connections'), 1500)};</script>
 
-<?php } 
-	} ?>
+<?php
+	
+}
+}
+?>
 	<div class="imgheader">
 		<div class="formbackground">
 			<div class="form">
 				<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"
 					method="post">
 					<div class="ui-widget">
-					<input type="text" id="<?php echo $fromstyle;?>" class="input" name="from" placeholder="Von" autocomplete="off" />
+						<input type="text" id="<?php echo $fromstyle;?>" class="input"
+							name="from" placeholder="Von" autocomplete="off" />
 					</div>
 					<div class="ui-widget">
-					<input type="text" id="<?php echo $tostyle;?>" class="input" name="to" placeholder="Bis" autocomplete="off"/>
+						<input type="text" id="<?php echo $tostyle;?>" class="input"
+							name="to" placeholder="Bis" autocomplete="off" />
 					</div>
 					<input type="date" name="date"
 						value="<?php print(date("Y-m-d")); ?>"> <input type="time"
@@ -126,16 +147,16 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		<?php
 		if (isset ( $connections )) {
 			echo "<div id='connections'>";
- 		if (!empty($connections)){
-			echo "<div id='inside'>";
-			//ToDo get Real destinations
-			echo "<h2 class='title'>", $connections[0]->getFrom(), " - ", $connections[0]->getTo(), "<br><small>", date('d.m.Y', strtotime($connections[0]->getDepartureTime())), "</small></h2>";
- 			//echo "<h2>", date('H:i', strtotime($connections[0]->getDepartureTime())), "</h2>";
-
-			$i = 0;
-			foreach ( $connections as $connection ) {
-				$i = $i + 1;
-			?>
+			if (! empty ( $connections )) {
+				echo "<div id='inside'>";
+				// ToDo get Real destinations
+				echo "<h2 class='title'>", $connections [0]->getFrom (), " - ", $connections [0]->getTo (), "<br><small>", date ( 'd.m.Y', strtotime ( $connections [0]->getDepartureTime () ) ), "</small></h2>";
+				// echo "<h2>", date('H:i', strtotime($connections[0]->getDepartureTime())), "</h2>";
+				
+				$i = 0;
+				foreach ( $connections as $connection ) {
+					$i = $i + 1;
+					?>
 		
 			<div class='connection' id="<?php echo $i;?>">
 		<div class='item'>
@@ -155,9 +176,11 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		</div>
 		<div class='item norightborder'>
 			<div class='type'>
-				<p><?php foreach ($connection->getJourney() as $journey){
-					echo " -> ", $journey->getCategory();
-				}
+				<p><?php
+					
+foreach ( $connection->getJourney () as $journey ) {
+						echo " -> ", $journey->getCategory ();
+					}
 					?></p>
 			</div>
 		</div>
@@ -171,42 +194,44 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		<br>
 		
 			<?php
-				// var_dump($connection);
-				foreach ( $connection->getJourney () as $journey ) {?>
+					// var_dump($connection);
+					foreach ( $connection->getJourney () as $journey ) {
+						?>
 				<div class='journey'>
-					<br><table>
-						<tr>
-							<td><?php echo date('H:i', strtotime($journey->getDeparture()->getTime()));?></td>
-							<td><?php echo $journey->getDeparture()->getLocation();?></td>
-							<td><?php echo $journey->getDeparture()->getPlatform();?></td>
-						</tr>
-						<tr>
-							<td></td>
-							<td><?php echo $journey->getName();?></td>
-						</tr>
-						<tr>
-							<td><?php echo date('H:i', strtotime($journey->getArrival()->getTime()));?></td>
-							<td><?php echo $journey->getArrival()->getLocation();?></td>
-							<td><?php echo $journey->getArrival()->getPlatform();?></td>
-						</tr>
-					</table>
-					</div>
-				<?php }
-				?></div><?php
-			} 
-			
- 		} else {
-				//ToDo
-			echo "Something went wrong!";
-		}
+			<br>
+			<table>
+				<tr>
+					<td><?php echo date('H:i', strtotime($journey->getDeparture()->getTime()));?></td>
+					<td><?php echo $journey->getDeparture()->getLocation();?></td>
+					<td><?php echo $journey->getDeparture()->getPlatform();?></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><?php echo $journey->getName();?></td>
+				</tr>
+				<tr>
+					<td><?php echo date('H:i', strtotime($journey->getArrival()->getTime()));?></td>
+					<td><?php echo $journey->getArrival()->getLocation();?></td>
+					<td><?php echo $journey->getArrival()->getPlatform();?></td>
+				</tr>
+			</table>
+		</div>
+				<?php
+					
+}
+					?></div><?php
+				}
+			} else {
+				// ToDo
+				echo "Something went wrong!";
+			}
 			echo "</div><div class=\"buttonBottom2\">
 			<a href=\"#aboutus\" class=\"click\"> <i
 				class=\"fa fa-chevron-circle-down fa-3x\" style=\"color: #1D50E8\"></i>
 			</a>
 		</div>";
-		} 
-		echo "</div> "
-		?>
+		}
+		echo "</div> "?>
 		 
 	<div id="aboutus">
 		<div class="about">
@@ -229,9 +254,10 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 					Chiramed Phong Penglerd <small> Raiffeisen Schweiz</small>
 				</h3>
 				<p>
-					<a href="https://www.youtube.com/user/Phong6698" target="_blank"><i class="fa fa-youtube fa-3x"></i></a>&emsp;
-					<a href="#" target="_blank"><i class="fa fa-flickr fa-3x"></i></a>&emsp;
-					<a href="#" target="_blank"><i class="fa fa-github fa-3x"></i></a>&emsp;
+					<a href="https://www.youtube.com/user/Phong6698" target="_blank"><i
+						class="fa fa-youtube fa-3x"></i></a>&emsp; <a href="#"
+						target="_blank"><i class="fa fa-flickr fa-3x"></i></a>&emsp; <a
+						href="#" target="_blank"><i class="fa fa-github fa-3x"></i></a>&emsp;
 					<a href="#" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>
 				</p>
 			</div>
@@ -251,19 +277,11 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		</div>
 	</div>
 	<div id="footer">
-		<div id="containerfooter">
-			<div id="leftfooter">
-				<img alt="logo" src="img/masters2.gif" width="300px" height="150px">
-			</div>
-			<div id="rightfooter">
-				<p>&copy; <?php echo date("Y"); ?> - Masters-Projects <br/>
-				Phong Penglerd, Elia Perenzin und Luca Marti</p>
-			</div>
-		<div class="clear"></div>
-		<h1></h1>
+		<div id="footercenter">
+			<p>&copy; <?php echo date('Y'); ?> by MastersProjects | Elia Perenzin, Phong Penglerd und Luca Marti</p>
 		</div>
 	</div>
-<!-- Our javascripts for scroll an autocomplete -->
+	<!-- Our javascripts for scroll an autocomplete -->
 	<script src="style/scroll.js"></script>
 	<script src="style/autocomplete.js"></script>
 </body>
