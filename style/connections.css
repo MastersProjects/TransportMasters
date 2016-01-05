@@ -13,6 +13,11 @@
 	padding: 50px 0;
 }
 
+.norightborder {
+	border-right: none;
+	width: 100px;
+}
+
 /* Limitation of autocomplete */
 .ui-autocomplete {
 	max-height: 200px;
