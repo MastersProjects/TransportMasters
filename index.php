@@ -187,7 +187,7 @@ foreach ( $connection->getJourney () as $journey ) {
 		<div class='item right'>
 			<div class='details'>
 				<p>
-					Details anzeigen<i class="fa fa-plus-circle fa-2x plusbutton"></i>
+					<span class="visibleFalse">Details anzeigen</span><i class="fa fa-plus-circle fa-2x plusbutton"></i>
 				</p>
 			</div>
 		</div>

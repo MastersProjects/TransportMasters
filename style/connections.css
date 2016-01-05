@@ -13,11 +13,6 @@
 	padding: 50px 0;
 }
 
-.norightborder {
-	border-right: none;
-	width: 100px;
-}
-
 /* Limitation of autocomplete */
 .ui-autocomplete {
 	max-height: 200px;
@@ -36,6 +31,11 @@
 	height: 30px;
 	float: left;
 	font-family: sans-serif;
+}
+
+.norightborder {
+	border-right: none;
+	width: 150px
 }
 
 .item div p {
@@ -71,4 +71,10 @@
 .details:hover {
 	float: right;
 	color: #1D50E8;
+}
+
+@media (max-width: 800px){
+	.visibleFalse{
+		visibility: hidden;
+	}
 }
