@@ -156,6 +156,22 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 				$i = 0;
 				foreach ( $connections as $connection ) {
 					$i = $i + 1;
+			
+					$longjourney = null;
+					foreach ( $connection->getJourney () as $journey ) {
+						$longjourney .= " -> " . $journey->getCategory ();
+					}
+					
+					$lengthjourney = substr_count($longjourney, " ");
+					
+					if ($lengthjourney > 6) {
+						$explode = explode(" ", $longjourney);
+						$longjourney = "";
+						for ($l = 0; $l == 6; $l++) {
+							$longjourney .= $explode[$l];
+						}
+						$longjourney .= "..";
+					}
 					?>
 		
 			<div class='connection' id="<?php echo $i;?>">
@@ -176,12 +192,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		</div>
 		<div class='item norightborder'>
 			<div class='type'>
-				<p><?php
-					
-foreach ( $connection->getJourney () as $journey ) {
-						echo " -> ", $journey->getCategory ();
-					}
-					?></p>
+				<p><?php echo $longjourney; ?></p>
 			</div>
 		</div>
 		<div class='item right'>
