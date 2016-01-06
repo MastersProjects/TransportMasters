@@ -65,6 +65,7 @@
 </head>
 <body>
 <?php
+// include_once("analytics.php");
 require_once ('model/Connection.php');
 require_once ('model/Journey.php');
 require_once ('model/JourneyDetails.php');
@@ -74,16 +75,23 @@ $fromstyle = "";
 $tostyle = "";
 if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 	// We can do validation here
+	function test_input($data) {
+		$data = trim($data);
+		$data = stripslashes($data);
+		$data = rawurlencode(utf8_encode($data));
+		return $data;
+	}
+	
 	$validation = array ();
 	if (! (empty ( $_POST ['from'] ))) {
-		$from = $_POST ['from'];
+		$from = test_input($_POST ['from']);
 		$validation [0] = true;
 	} else {
 		$validation [0] = false;
 		$fromstyle = "error";
 	}
 	if (! (empty ( $_POST ['to'] ))) {
-		$to = $_POST ['to'];
+		$to = test_input($_POST ['to']);
 		$validation [1] = true;
 	} else {
 		$validation [1] = false;
@@ -97,7 +105,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 	if (isset ( $_POST ['time'] )) {
 		$time = $_POST ['time'];
 	}
-	
+
 	if ($validation [0] == true && $validation [1] == true) {
 		$params = array (
 				"from" => $from,
@@ -237,10 +245,9 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 				Luca Marti <small>Apprentice</small><br> <small>Z&uuml;rich Airport</small>
 			</h3>
 			<p>
-				<a href="#" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>&emsp;
-				<a href="#" target="_blank"><i class="fa fa-github fa-3x"></i></a>&emsp;
-				<a href="#" target="_blank"><i class="fa fa-facebook fa-3x"></i></a>&emsp;
-				<a href="#" target="_blank"><i class="fa fa-twitter fa-3x"></i></a>
+				<a href="https://github.com/zmartl-bbc" target="_blank"><i class="fa fa-github fa-3x"></i></a>&emsp;
+				<a href="https://www.instagram.com/luca.marti/" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>&emsp;
+				<a href="https://www.facebook.com/lucaemanuelmarti" target="_blank"><i class="fa fa-facebook fa-3x"></i></a>
 			</p>
 		</div>
 		<div class="aboutperson">
@@ -250,11 +257,11 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 				Chiramed Phong Penglerd <small> Raiffeisen Schweiz</small>
 			</h3>
 			<p>
-				<a href="https://www.youtube.com/user/Phong6698" target="_blank"><i
-					class="fa fa-youtube fa-3x"></i></a>&emsp; <a href="#"
-					target="_blank"><i class="fa fa-flickr fa-3x"></i></a>&emsp; <a
-					href="#" target="_blank"><i class="fa fa-github fa-3x"></i></a>&emsp;
-				<a href="#" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>
+				<a href="https://github.com/Phong6698" target="_blank"><i class="fa fa-github fa-3x"></i></a>&emsp;
+				<a href="https://www.instagram.com/phong6698/" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>&emsp; 
+				<a href="https://www.facebook.com/phong.penglerd" target="_blank"><i class="fa fa-facebook fa-3x"></i></a>&emsp; 
+				<a href="https://www.youtube.com/user/Phong6698" target="_blank"><i class="fa fa-youtube fa-3x"></i></a>
+				
 			</p>
 		</div>
 		<div class="aboutperson">
@@ -264,10 +271,10 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 					Enterprise</small>
 			</h3>
 			<p>
-				<a href="#" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>&emsp;
-				<a href="https://www.flickr.com/photos/eliaperenzin/"
-					target="_blank"><i class="fa fa-flickr fa-3x"></i></a>&emsp; <a
-					href="#" target="_blank"><i class="fa fa-github fa-3x"></i></a>
+				<a href="https://github.com/zperee" target="_blank"><i class="fa fa-github fa-3x"></i></a>&emsp;
+				<a href="https://www.instagram.com/1998_elia/" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>&emsp;
+				<a href="https://www.flickr.com/photos/eliaperenzin/"target="_blank"><i class="fa fa-flickr fa-3x"></i></a>
+				
 			</p>
 		</div>
 		<div class="clear"></div>
