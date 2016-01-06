@@ -7,13 +7,14 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	visibility: inherit;
-height: 100vh;
+	height: 100vh;
 }
 
 .buttonBottom {
 	position: absolute;
 	bottom: 0;
-	margin: 0 50%
+	text-align: center;
+	width: 100%
 }
 
 @media ( max-height : 520px) {
@@ -47,7 +48,7 @@ h1 {
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
 	position: relative;
-	top: 30%;
+	top: 25%;	
 }
 
 a:link, a:visited {
@@ -81,7 +82,6 @@ a:hover {
 
 .clear {
 	clear: both;
-	float: none;
 }
 
 .aboutperson h3, p {
@@ -89,100 +89,37 @@ a:hover {
 	font-family: arial;
 }
 
-@media ( min-width : 1070px) {
-	#aboutus {
-		height: 100vh;
-		background-image: url("../img/background_about_us.jpg");
-		background-repeat: no-repeat;
-		background-size: cover;
-		visibility: inherit;
-	}
-	.about {
-		padding: 10% 0 0 0;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.aboutperson {
-		background-color: rgba(0, 0, 0, 0.5);
-		float: left;
-		width: 250px;
-		height: auto;
-		margin: 20px 40px 20px 40px;
-		padding: 10px 10px 0 10px;
-	}
-	.img-about {
-		border-radius: 50%;
-		display: block;
-		max-width: 100%;
-		height: auto;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 10px
-	}
+#aboutus {
+	min-height: 100vh;
+	height: auto;
+	background-image: url("../img/background_about_us.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	visibility: inherit;
 }
 
-@media ( min-width : 717px) and (max-width: 1070px) {
-	#aboutus {
-		height: 120vh;
-		background-image: url("../img/background_about_us.jpg");
-		background-repeat: no-repeat;
-		background-size: cover;
-		visibility: inherit;
-	}
-	.about {
-		padding: 20px 0 0 0;
-		margin-left: auto;
-		margin-right: auto;
-		margin-left: auto;
-	}
-	.aboutperson {
-		background-color: rgba(0, 0, 0, 0.5);
-		float: left;
-		width: 250px;
-		height: auto;
-		margin: 20px 40px 20px 40px;
-		padding: 10px 10px 0 10px;
-	}
-	.img-about {
-		border-radius: 50%;
-		display: block;
-		max-width: 100%;
-		height: auto;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 10px
-	}
+.about {
+	height: 1000px;
+	padding: 10% 0 0 0;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-@media ( max-width : 717px) {
-	#aboutus {
-		height: 180vh;
-		background-image: url("../img/background_about_us.jpg");
-		background-repeat: no-repeat;
-		background-size: cover;
-		visibility: inherit;
-	}
-	.about {
-		padding: 20px 0 0 0;
-		margin-left: auto;
-		margin-right: auto;
-		margin-left: auto;
-	}
-	.aboutperson {
-		background-color: rgba(0, 0, 0, 0.5);
-		float: left;
-		width: 250px;
-		height: auto;
-		margin: 20px 40px 20px 40px;
-		padding: 10px 10px 0 10px;
-	}
-	.img-about {
-		border-radius: 50%;
-		display: block;
-		max-width: 100%;
-		height: auto;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 10px
-	}
+.aboutperson {
+	background-color: rgba(0, 0, 0, 0.5);
+	float: left;
+	width: 250px;
+	height: auto;
+	margin: 20px 40px 20px 40px;
+	padding: 10px 10px 0 10px;
+}
+
+.img-about {
+	border-radius: 50%;
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px
 }

@@ -114,8 +114,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 <script type="text/javascript">onload = function() {scrollToElement($(this).attr('connections'), 1500)};</script>
 
 <?php
-	
-}
+	}
 }
 ?>
 	<div class="imgheader">
@@ -140,7 +139,8 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		</div>
 		<div class="buttonBottom">
 			<a href="#aboutus" class="click"> <i
-				class="fa fa-chevron-circle-down fa-3x" style="color: #1D50E8"></i>
+				class="fa fa-chevron-circle-down fa-3x"
+				style="color: #1D50E8; text-align: center"></i>
 			</a>
 		</div>
 	</div>
@@ -156,22 +156,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 				$i = 0;
 				foreach ( $connections as $connection ) {
 					$i = $i + 1;
-			
-					$longjourney = null;
-					foreach ( $connection->getJourney () as $journey ) {
-						$longjourney .= " -> " . $journey->getCategory ();
-					}
 					
-					$lengthjourney = substr_count($longjourney, " ");
-					
-					if ($lengthjourney > 6) {
-						$explode = explode(" ", $longjourney);
-						$longjourney = "";
-						for ($l = 0; $l == 6; $l++) {
-							$longjourney .= $explode[$l];
-						}
-						$longjourney .= "..";
-					}
 					?>
 		
 			<div class='connection' id="<?php echo $i;?>">
@@ -180,25 +165,31 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 				<p><?php echo date('H:i', strtotime($connection->getDepartureTime())), " - ", date('H:i', strtotime($connection->getArivallTime()))?></p>
 			</div>
 		</div>
-		<div class='item'>
+		<div class='item' id = "durationItem">
 			<div class='duration'>
 				<p><?php echo trim(substr($connection->getDuration(),3,1),0) . substr($connection->getDuration(), 4, 4), "'";?></p>
 			</div>
 		</div>
-		<div class='item' id = 'borderChanges'>
+		<div class='item' id='borderChanges'>
 			<div class='changes'>
 				<p><?php echo $connection->getTransfers(), " Umstiege"?></p>
 			</div>
 		</div>
 		<div class='item norightborder'>
 			<div class='type'>
-				<p><?php echo $longjourney; ?></p>
+				<p><?php
+					
+					foreach ( $connection->getJourney () as $journey ) {
+						echo " -> ", $journey->getCategory ();
+					}
+					?></p>
 			</div>
 		</div>
 		<div class='item right'>
 			<div class='details'>
 				<p>
-					<span class="visibleFalse">Details anzeigen</span><i class="fa fa-plus-circle fa-2x plusbutton"></i>
+					<span class="visibleFalse">Details anzeigen</span><i
+						class="fa fa-plus-circle fa-2x plusbutton"></i>
 				</p>
 			</div>
 		</div>
@@ -228,8 +219,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 			</table>
 		</div>
 				<?php
-					
-}
+					}
 					?></div><?php
 				}
 			} else {
@@ -241,47 +231,46 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		echo "</div> "?>
 		 
 	<div id="aboutus">
-		<div class="about">
-			<div class="aboutperson">
-				<img class="img-about" src="img/luca.png" alt="Luca Marti">
-				<h3>
-					Luca Marti <small>Apprentice</small><br> <small>Z&uuml;rich Airport</small>
-				</h3>
-				<p>
-					<a href="#" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>&emsp;
-					<a href="#" target="_blank"><i class="fa fa-github fa-3x"></i></a>&emsp;
-					<a href="#" target="_blank"><i class="fa fa-facebook fa-3x"></i></a>&emsp;
-					<a href="#" target="_blank"><i class="fa fa-twitter fa-3x"></i></a>
-				</p>
-			</div>
-			<div class="aboutperson">
-				<img class="img-about" src="img/phong.png"
-					alt="Chiramed Phong Penglerd">
-				<h3>
-					Chiramed Phong Penglerd <small> Raiffeisen Schweiz</small>
-				</h3>
-				<p>
-					<a href="https://www.youtube.com/user/Phong6698" target="_blank"><i
-						class="fa fa-youtube fa-3x"></i></a>&emsp; <a href="#"
-						target="_blank"><i class="fa fa-flickr fa-3x"></i></a>&emsp; <a
-						href="#" target="_blank"><i class="fa fa-github fa-3x"></i></a>&emsp;
-					<a href="#" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>
-				</p>
-			</div>
-			<div class="aboutperson">
-				<img class="img-about" src="img/elia.png" alt="Elia Perenzin">
-				<h3>
-					Elia Perenzin <small>Apperntice</small><br> <small>Hewlett-Packard
-						Enterprise</small>
-				</h3>
-				<p>
-					<a href="#" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>&emsp;
-					<a href="https://www.flickr.com/photos/eliaperenzin/"
-						target="_blank"><i class="fa fa-flickr fa-3x"></i></a>&emsp; <a
-						href="#" target="_blank"><i class="fa fa-github fa-3x"></i></a>
-				</p>
-			</div>
+		<div class="aboutperson">
+			<img class="img-about" src="img/luca.png" alt="Luca Marti">
+			<h3>
+				Luca Marti <small>Apprentice</small><br> <small>Z&uuml;rich Airport</small>
+			</h3>
+			<p>
+				<a href="#" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>&emsp;
+				<a href="#" target="_blank"><i class="fa fa-github fa-3x"></i></a>&emsp;
+				<a href="#" target="_blank"><i class="fa fa-facebook fa-3x"></i></a>&emsp;
+				<a href="#" target="_blank"><i class="fa fa-twitter fa-3x"></i></a>
+			</p>
 		</div>
+		<div class="aboutperson">
+			<img class="img-about" src="img/phong.png"
+				alt="Chiramed Phong Penglerd">
+			<h3>
+				Chiramed Phong Penglerd <small> Raiffeisen Schweiz</small>
+			</h3>
+			<p>
+				<a href="https://www.youtube.com/user/Phong6698" target="_blank"><i
+					class="fa fa-youtube fa-3x"></i></a>&emsp; <a href="#"
+					target="_blank"><i class="fa fa-flickr fa-3x"></i></a>&emsp; <a
+					href="#" target="_blank"><i class="fa fa-github fa-3x"></i></a>&emsp;
+				<a href="#" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>
+			</p>
+		</div>
+		<div class="aboutperson">
+			<img class="img-about" src="img/elia.png" alt="Elia Perenzin">
+			<h3>
+				Elia Perenzin <small>Apperntice</small><br> <small>Hewlett-Packard
+					Enterprise</small>
+			</h3>
+			<p>
+				<a href="#" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>&emsp;
+				<a href="https://www.flickr.com/photos/eliaperenzin/"
+					target="_blank"><i class="fa fa-flickr fa-3x"></i></a>&emsp; <a
+					href="#" target="_blank"><i class="fa fa-github fa-3x"></i></a>
+			</p>
+		</div>
+		<div class="clear"></div>
 	</div>
 	<div id="footer">
 		<div id="footercenter">

@@ -54,6 +54,9 @@
 	border-bottom: 5px solid #285F88;
 }
 
+#durationItem {
+	width: 38px;
+}
 .right {
 	float: right;
 	border: none;
@@ -87,6 +90,12 @@
 }
 
 @media ( max-width : 740px) {
+	#inside{
+		margin: 0px;
+	}
+}
+
+@media (max-width: 635px){
 	.type{
 		display: none;
 	}
@@ -94,11 +103,8 @@
 	.norightborder{
 		width: 0px;
 		padding: 0px;
-	}
-	
-	#inside{
-		margin: 0px;
-	}
+	}	
+}
 
 @media ( max-width : 500px) {
 	.changes{
@@ -116,4 +122,3 @@
 
 }
 
-}
