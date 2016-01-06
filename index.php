@@ -185,7 +185,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 				<p><?php echo trim(substr($connection->getDuration(),3,1),0) . substr($connection->getDuration(), 4, 4), "'";?></p>
 			</div>
 		</div>
-		<div class='item'>
+		<div class='item' id = 'borderChanges'>
 			<div class='changes'>
 				<p><?php echo $connection->getTransfers(), " Umstiege"?></p>
 			</div>

@@ -7,17 +7,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	visibility: inherit;
-	height: 100vh;
-}
-
-h1 {
-	color: white;
-	font-family: arial;
-	margin: 0;
-}
-
-.clear{
-	clear: both;
+height: 100vh;
 }
 
 .buttonBottom {
@@ -26,6 +16,31 @@ h1 {
 	margin: 0 50%
 }
 
+@media ( max-height : 520px) {
+	.imgheader {
+		background-repeat: no-repeat;
+		background-size: cover;
+		visibility: inherit;
+		min-height: 100vh;
+		height: auto;
+	}
+}
+
+@media ( max-height : 370px) {
+	.buttonBottom {
+		display: none;
+	}
+}
+
+h1 {
+	color: white;
+	font-family: arial;
+	margin: 0;
+}
+
+.clear {
+	clear: both;
+}
 
 .formbackground {
 	height: 315px;
@@ -35,12 +50,12 @@ h1 {
 	top: 30%;
 }
 
-a:link, a:visited{
+a:link, a:visited {
 	color: white;
 	text-decoration: none;
 }
 
-a:hover{
+a:hover {
 	text-decoration: underline;
 	color: grey;
 }
@@ -51,7 +66,7 @@ a:hover{
 	min-height: 50px;
 	height: auto;
 	max-height: 100px;
-	margin-top: -20px;
+	margin: 0 0 0 0;
 }
 
 #footercenter {
@@ -69,7 +84,12 @@ a:hover{
 	float: none;
 }
 
-@media ( min-width : 1071px) {
+.aboutperson h3, p {
+	color: white;
+	font-family: arial;
+}
+
+@media ( min-width : 1070px) {
 	#aboutus {
 		height: 100vh;
 		background-image: url("../img/background_about_us.jpg");
@@ -101,31 +121,7 @@ a:hover{
 	}
 }
 
-@media (min-width: 1071px) and (max-width: 1400px){
-	#containerfooter {
-		width: 70%;
-	}
-	#leftfooter {
-		width: 300px;
-	}
-	
-	#leftfooter img {
-		width: 300px;
-		height: 150px;
-	}
-	
-	#rightfooter p{
-		width: 200px;
-		padding: 40px 0 0 10px;
-		margin: 0;
-	}
-	
-	#rightfooter {
-		height: 150px;
-	}
-}
-
-@media ( min-width: 717px) and (max-width: 1070px) {
+@media ( min-width : 717px) and (max-width: 1070px) {
 	#aboutus {
 		height: 120vh;
 		background-image: url("../img/background_about_us.jpg");
@@ -156,36 +152,9 @@ a:hover{
 		margin-right: auto;
 		margin-top: 10px
 	}
-	
-	#containerfooter {
-		width: 75%;
-	}
-	#leftfooter {
-		width: 200px;
-	}
-	
-	#leftfooter img {
-		width: 200px;
-		height: 100px;
-	}
-	
-	#rightfooter p{
-		width: 300px;
-		padding: 20px 0 0 10px;
-		margin: 0;
-	}
-	
-	#rightfooter {
-		height: 100px;
-	}
 }
 
-.aboutperson h3, p {
-	color: white;
-	font-family: arial;
-}
-
-@media (max-width: 716px) {
+@media ( max-width : 717px) {
 	#aboutus {
 		height: 180vh;
 		background-image: url("../img/background_about_us.jpg");
@@ -216,47 +185,4 @@ a:hover{
 		margin-right: auto;
 		margin-top: 10px
 	}
-	#leftfooter {
-		width: 100px;
-	}
-	
-	#leftfooter img {
-		width: 100px;
-		height: 50px;
-	}
-	
-	#rightfooter p{
-		width: 225px;
-		padding: 0 0 0 10px;
-		margin: 0;
-	}
-	
-	#rightfooter {
-		height: 50px;
-	}
 }
-
-@media (max-width: 466px){
-	#leftfooter {
-		width: 75px;
-	}
-	
-	#leftfooter img {
-		width: 75px;
-		height: 37px;
-	}
-	
-	#rightfooter p{
-		width: 225px;
-		padding: 0 0 0 10px;
-		font-size: 0.8em;
-		margin: 0;
-	}
-	
-	#rightfooter {
-		height: 37px;
-	}
-}
-
-
-

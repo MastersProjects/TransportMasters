@@ -9,7 +9,8 @@
 }
 
 #connections {
-	height: 100vh;
+	min-height: 100vh;
+	height: auto;
 	padding: 50px 0;
 }
 
@@ -47,7 +48,7 @@
 	background: #2980b9;
 	color: #fff;
 	padding: 15px;
-	height: 60px;
+	height: auto;
 	margin-top: 0px;
 	font-family: 'Open Sans', sans-serif;
 	border-bottom: 5px solid #285F88;
@@ -73,7 +74,7 @@
 	color: #1D50E8;
 }
 
-@media ( max-width : 880px) {
+@media ( max-width : 900px) {
 	.visibleFalse {
 		display: none;
 	}
@@ -81,15 +82,38 @@
 		float: right;
 		border: none;
 		width: 0px;
+		padding: 0px;
 	}
 }
 
-@media ( max-width : 730px) {
+@media ( max-width : 740px) {
 	.type{
 		display: none;
 	}
 	
 	.norightborder{
 		width: 0px;
+		padding: 0px;
 	}
+	
+	#inside{
+		margin: 0px;
+	}
+
+@media ( max-width : 500px) {
+	.changes{
+		display: none;
+	}
+	
+	#borderChanges{
+		padding-right: 0px;
+		border-right: none;
+	}
+	
+	.connection{
+		margin: 10px 25px 10px 25px;
+	}
+
+}
+
 }
