@@ -132,15 +132,15 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 					method="post">
 					<div class="ui-widget">
 						<input type="text" id="<?php echo $fromstyle;?>" class="input"
-							name="from" placeholder="Von" autocomplete="off" />
+							name="from" placeholder="Von" autocomplete="off" value="<?php if (isset($_POST['from'])){echo $_POST['from'];}?>"/>
 					</div>
 					<div class="ui-widget">
 						<input type="text" id="<?php echo $tostyle;?>" class="input"
-							name="to" placeholder="Bis" autocomplete="off" />
+							name="to" placeholder="Bis" autocomplete="off" value="<?php if (isset($_POST['to'])){echo $_POST['to'];}?>" />
 					</div>
 					<input type="date" name="date"
-						value="<?php print(date("Y-m-d")); ?>"> <input type="time"
-						name="time" value="<?php print(date("H:i")); ?>"> <input
+						value="<?php if (isset($_POST['date'])){print $_POST['date'];} else {print(date("Y-m-d"));} ?>"> <input type="time"
+						name="time" value="<?php if (isset($_POST['time'])){print $_POST['time'];} else {print(date("H:i"));} ?>"> <input
 						type="submit" value="Send" />
 				</form>
 			</div>

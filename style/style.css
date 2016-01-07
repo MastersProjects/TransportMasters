@@ -44,7 +44,7 @@ h1 {
 }
 
 .formbackground {
-	height: 315px;
+	height: auto;
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
 	position: relative;
