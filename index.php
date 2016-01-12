@@ -211,18 +211,18 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 			<br>
 			<table>
 				<tr>
-					<td><?php echo date('H:i', strtotime($journey->getDeparture()->getTime()));?></td>
-					<td><?php echo $journey->getDeparture()->getLocation();?></td>
-					<td><?php echo $journey->getDeparture()->getPlatform();?></td>
+					<td class="journeytd"><?php echo date('H:i', strtotime($journey->getDeparture()->getTime()));?></td>
+					<td class="journeytd"><?php echo $journey->getDeparture()->getLocation();?></td>
+					<td class="journeytd"><?php echo $journey->getDeparture()->getPlatform();?></td>
 				</tr>
 				<tr>
 					<td></td>
 					<td><?php echo $journey->getName();?></td>
 				</tr>
 				<tr>
-					<td><?php echo date('H:i', strtotime($journey->getArrival()->getTime()));?></td>
-					<td><?php echo $journey->getArrival()->getLocation();?></td>
-					<td><?php echo $journey->getArrival()->getPlatform();?></td>
+					<td class="journeytd"><?php echo date('H:i', strtotime($journey->getArrival()->getTime()));?></td>
+					<td class="journeytd"><?php echo $journey->getArrival()->getLocation();?></td>
+					<td class="journeytd"><?php echo $journey->getArrival()->getPlatform();?></td>
 				</tr>
 			</table>
 		</div>

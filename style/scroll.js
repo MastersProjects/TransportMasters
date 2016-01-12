@@ -16,9 +16,9 @@ function scrollToElement (el, ms) {
 //Open journey details clicklistener and function
 $('.connection').click(function(e) {
 	if($(e.currentTarget).children('.journey').is(":visible")){
-		$(".journey").hide();
+		$(".journey").slideUp();
 	} else {
-		$(".journey").hide();
-		$(e.currentTarget).children().show();
+		$(".journey").slideUp();
+		$(e.currentTarget).children().slideDown();
 	}
 });

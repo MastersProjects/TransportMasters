@@ -2,6 +2,26 @@
 	display: none;
 }
 
+.journey {
+	font-family: arial;
+	margin-left: 50px;
+	border-top: 1px solid gray;
+	margin-top: 30px;
+}
+
+.journey table tbody tr td{
+	padding: 10px 10px;
+}
+
+.journey table {
+	border-left: 4px solid #285F88;
+}
+
+.journeytd {
+	color: #285F88;
+	font-weight: 800;
+}
+
 .connection {
 	min-height: 30px;
 	margin: 10px 50px;
@@ -24,6 +44,7 @@
 #inside {
 	border: 2px solid #285F88;
 	margin: 0 50px;
+	padding-bottom: 35px;
 }
 
 .item {
