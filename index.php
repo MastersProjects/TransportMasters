@@ -65,7 +65,7 @@
 </head>
 <body>
 <?php
-// include_once("analytics.php");
+include_once("analytics.php");
 require_once ('model/Connection.php');
 require_once ('model/Journey.php');
 require_once ('model/JourneyDetails.php');
