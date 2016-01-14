@@ -1,6 +1,6 @@
 <?php
 /**
- * ToDo
+ * Contains all inplemented Mehtodes from JSONLoadingTask
  * @author Chiramed Phong Penglerd, Luca Marti, Elia Perenzin
  * @version 1.0
  * TransportMasters 2015

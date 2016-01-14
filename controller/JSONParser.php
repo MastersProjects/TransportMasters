@@ -1,6 +1,7 @@
 <?php
 /**
- * ToDo
+ * In this class the JSONString is transormed into 
+ * our objects from the model
  * @author Chiramed Phong Penglerd, Luca Marti, Elia Perenzin
  * @version 1.0
  * TransportMasters 2015

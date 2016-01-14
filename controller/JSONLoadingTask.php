@@ -1,6 +1,7 @@
 <?php
 /**
- * ToDo
+ * abstract class for ConnectionLoader, contains all 
+ * uninplemented methodes which are used in Connectionloader
  * @author Chiramed Phong Penglerd, Luca Marti, Elia Perenzin
  * @version 1.0
  * TransportMasters 2015

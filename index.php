@@ -74,7 +74,7 @@ require_once ('Controller.php');
 $fromstyle = "";
 $tostyle = "";
 if ($_SERVER ["REQUEST_METHOD"] == "POST") {
-	// We can do validation here
+	//Function for the validation of the input
 	function test_input($data) {
 		$data = trim($data);
 		$data = stripslashes($data);
