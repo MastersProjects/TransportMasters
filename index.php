@@ -259,7 +259,6 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 			<p>
 				<a href="https://github.com/Phong6698" target="_blank"><i class="fa fa-github fa-3x"></i></a>&emsp;
 				<a href="https://www.instagram.com/phong6698/" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>&emsp; 
-				<a href="https://www.facebook.com/phong.penglerd" target="_blank"><i class="fa fa-facebook fa-3x"></i></a>&emsp; 
 				<a href="https://www.youtube.com/user/Phong6698" target="_blank"><i class="fa fa-youtube fa-3x"></i></a>
 				
 			</p>
