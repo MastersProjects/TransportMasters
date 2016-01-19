@@ -167,7 +167,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 					
 					?>
 		
-			<div class='connection' id="<?php echo $i;?>">
+			<div class="connection <?php if(($i%2)==0){echo 'background1';} ?>" id="<?php echo $i; ?>">
 		<div class='item'>
 			<div class='departure'>
 				<p><?php echo date('H:i', strtotime($connection->getDepartureTime())), " - ", date('H:i', strtotime($connection->getArivallTime()))?></p>

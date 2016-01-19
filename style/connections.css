@@ -25,7 +25,12 @@
 .connection {
 	min-height: 30px;
 	margin: 10px 50px;
-	padding-top: 20px;
+	padding: 10px 0;
+}
+
+.background1{
+	background: rgba(146, 146, 146, 0.5);
+
 }
 
 #connections {
@@ -108,6 +113,9 @@
 		width: 0px;
 		padding: 0px;
 	}
+	.fa fa-plus-circle fa-2x plusbutton{
+		margin-bottom: 10px;
+	}
 }
 
 @media ( max-width : 740px) {
@@ -142,4 +150,6 @@
 	}
 
 }
+
+
 
