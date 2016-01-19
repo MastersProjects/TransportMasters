@@ -123,3 +123,28 @@ a:hover {
 	margin-right: auto;
 	margin-top: 10px
 }
+
+h2 {
+	color: #fff;
+}
+
+.imprinth2 {
+	color: #285F88;
+	font-weight: 800;
+	font-family: arial;
+	padding: 0 10px;
+}
+
+.imprintp {
+	color: black;
+	padding: 0 10px;
+}
+
+.imprintp a{
+	color: #285F88;
+}
+
+#imprint {
+	margin: 10px 0 0 0;
+}
+

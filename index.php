@@ -279,7 +279,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 	</div>
 	<div id="footer">
 		<div id="footercenter">
-			<p>&copy; <?php echo date('Y'); ?> by MastersProjects | Elia Perenzin, Phong Penglerd und Luca Marti</p>
+			<p>&copy; <?php echo date('Y'); ?> by MastersProjects | Elia Perenzin, Phong Penglerd und Luca Marti | <a href="imprint.php">Impressum</a></p>
 		</div>
 	</div>
 	<!-- Our javascripts for scroll an autocomplete -->

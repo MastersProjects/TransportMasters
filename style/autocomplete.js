@@ -3,7 +3,7 @@
 $(function() {
 	$('.input').autocomplete({
 		source : function(request, response) {
-			$.get('http://transport.opendata.ch/v1/locations?', {
+			$.get('https://transport.opendata.ch/v1/locations?', {
 				query : request.term,
 				type : 'station'
 			}, function(data) {
