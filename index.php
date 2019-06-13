@@ -254,7 +254,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 			<img class="img-about" src="img/phong.png"
 				alt="Chiramed Phong Penglerd">
 			<h3>
-				Chiramed Phong Penglerd <small> Apperntice Raiffeisen Schweiz</small>
+				Chiramet Phong Penglerd <small> Apperntice Raiffeisen Schweiz</small>
 			</h3>
 			<p>
 				<a href="https://github.com/Phong6698" target="_blank"><i class="fa fa-github fa-3x"></i></a>&emsp;
