@@ -254,11 +254,11 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 			<img class="img-about" src="img/phong.png"
 				alt="Chiramed Phong Penglerd">
 			<h3>
-				Chiramet Phong Penglerd <small> Apperntice Raiffeisen Schweiz</small>
+				Chiramet Phong Penglerd <small> Raiffeisen Schweiz</small>
 			</h3>
 			<p>
 				<a href="https://github.com/Phong6698" target="_blank"><i class="fa fa-github fa-3x"></i></a>&emsp;
-				<a href="https://www.instagram.com/phong6698/" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>&emsp; 
+				<a href="https://www.instagram.com/chiramet.penglerd/" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>&emsp;
 				<a href="https://www.youtube.com/user/Phong6698" target="_blank"><i class="fa fa-youtube fa-3x"></i></a>
 				
 			</p>
